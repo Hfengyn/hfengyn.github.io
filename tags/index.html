@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="奔跑中逆袭">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-23T13:03:31.904Z">
+<meta property="og:updated_time" content="2017-08-23T13:03:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标签">
 
@@ -320,8 +320,11 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="tags/index.html"
-           data-title="标签" data-url="http://yoursite.com/tags/index.html">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -604,32 +607,28 @@
 
   
 
+
   
+
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"keeplonely"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
+      <script id="dsq-count-scr" src="https://fengbaby.disqus.com/count.js" async></script>
     
+
     
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/tags/index.html';
+          this.page.identifier = 'tags/index.html';
+          this.page.title = '标签';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fengbaby.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
   
-
-
-
 
 
 

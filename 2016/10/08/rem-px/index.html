@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="px,rem," />
+  <meta name="keywords" content="rem,px," />
 
 
 
@@ -95,7 +95,7 @@
 
 
 <meta name="description" content="rem 是指相对于根元素的字体大小的单位。简单的说它就是一个相对单位。为什么web app要使用rem？1、实现强大的屏幕适配布局：　　iphone6一下出了两款尺寸的手机，导致的移动端的屏幕种类更加的混乱，记得一两年前做web app有一种做法是以320宽度为标准去做适配，超过320的大小还是以320的规格去展示，这种实现方式以淘宝web app为代表作，但是近期手机淘宝首页进行了改版，采用了r">
-<meta name="keywords" content="px,rem">
+<meta name="keywords" content="rem,px">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在网页中，rem与px的换算">
 <meta property="og:url" content="http://yoursite.com/2016/10/08/rem-px/index.html">
@@ -341,7 +341,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/10/08/rem-px/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/08/rem-px/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/08/rem-px/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -399,6 +400,35 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>本人是穷鬼，您的支持将鼓励我变富裕！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="韓锋 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="韓锋 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -406,9 +436,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/px/" rel="tag"># px</a>
-          
             <a href="/tags/rem/" rel="tag"># rem</a>
+          
+            <a href="/tags/px/" rel="tag"># px</a>
           
         </div>
       
@@ -463,8 +493,11 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/08/rem-px/"
-           data-title="在网页中，rem与px的换算" data-url="http://yoursite.com/2016/10/08/rem-px/">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -772,32 +805,28 @@
 
   
 
+
   
+
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"keeplonely"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
+      <script id="dsq-count-scr" src="https://fengbaby.disqus.com/count.js" async></script>
     
+
     
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2016/10/08/rem-px/';
+          this.page.identifier = '2016/10/08/rem-px/';
+          this.page.title = '在网页中，rem与px的换算';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fengbaby.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
   
-
-
-
 
 
 

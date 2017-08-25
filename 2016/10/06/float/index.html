@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTML,CSS,float," />
+  <meta name="keywords" content="CSS,HTML,float," />
 
 
 
@@ -95,7 +95,7 @@
 
 
 <meta name="description" content="float 取值    属性 值 描述      left 向左浮动    right 向右浮动    none 默认值    inherit 继承    看一个例子: 红色线框代表父元素  脱离文档流，其实也没有完全脱离，会被父元素的边界挡住。 float的元素在同一文档流看一个例子: 红线框代表父元素  三个子元素『向左浮动』之后， 父元素就没有内容了，所以父元素没有高度了。 float元素半">
-<meta name="keywords" content="HTML,CSS,float">
+<meta name="keywords" content="CSS,HTML,float">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS Float 以及相关布局模式">
 <meta property="og:url" content="http://yoursite.com/2016/10/06/float/index.html">
@@ -348,7 +348,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/10/06/float/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/06/float/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/06/float/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -490,6 +491,35 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>本人是穷鬼，您的支持将鼓励我变富裕！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="韓锋 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="韓锋 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -497,9 +527,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTML/" rel="tag"># HTML</a>
-          
             <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
           
             <a href="/tags/float/" rel="tag"># float</a>
           
@@ -556,8 +586,11 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/06/float/"
-           data-title="CSS Float 以及相关布局模式" data-url="http://yoursite.com/2016/10/06/float/">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -865,32 +898,28 @@
 
   
 
+
   
+
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"keeplonely"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
+      <script id="dsq-count-scr" src="https://fengbaby.disqus.com/count.js" async></script>
     
+
     
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2016/10/06/float/';
+          this.page.identifier = '2016/10/06/float/';
+          this.page.title = 'CSS Float 以及相关布局模式';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fengbaby.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
   
-
-
-
 
 
 

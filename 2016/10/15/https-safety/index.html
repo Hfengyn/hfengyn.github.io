@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTTPS,安全," />
+  <meta name="keywords" content="安全,HTTPS," />
 
 
 
@@ -95,7 +95,7 @@
 
 
 <meta name="description" content="近一年公司在努力推进全站的 HTTPS 化，作为负责应用系统的我们，在配合这个趋势的过程中，顺便也就想去搞清楚 HTTP 后面的这个 S 到底是个什么含义？有什么作用？带来了哪些影响？毕竟以前也就只是模糊的知道大概是更安全，但到底怎么变得更安全的，实际上整个细节和流程并没有掌握的特别清晰。 所以这篇关于 HTTPS 的技术总结文章，主要提供一个关于 HTTPS 中的 S 一个整体的认识。从其产生的">
-<meta name="keywords" content="HTTPS,安全">
+<meta name="keywords" content="安全,HTTPS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTPS 互联网世界的安全基础">
 <meta property="og:url" content="http://yoursite.com/2016/10/15/https-safety/index.html">
@@ -351,7 +351,8 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2016/10/15/https-safety/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/15/https-safety/" itemprop="commentCount"></span>
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2016/10/15/https-safety/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -480,6 +481,35 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>本人是穷鬼，您的支持将鼓励我变富裕！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="韓锋 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="韓锋 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -487,9 +517,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTTPS/" rel="tag"># HTTPS</a>
-          
             <a href="/tags/安全/" rel="tag"># 安全</a>
+          
+            <a href="/tags/HTTPS/" rel="tag"># HTTPS</a>
           
         </div>
       
@@ -544,8 +574,11 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/10/15/https-safety/"
-           data-title="HTTPS 互联网世界的安全基础" data-url="http://yoursite.com/2016/10/15/https-safety/">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
       </div>
     
   </div>
@@ -853,32 +886,28 @@
 
   
 
+
   
+
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"keeplonely"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
+      <script id="dsq-count-scr" src="https://fengbaby.disqus.com/count.js" async></script>
     
+
     
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2016/10/15/https-safety/';
+          this.page.identifier = '2016/10/15/https-safety/';
+          this.page.title = 'HTTPS 互联网世界的安全基础';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fengbaby.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
   
-
-
-
 
 
 

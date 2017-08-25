@@ -96,7 +96,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="奔跑中逆袭">
-<meta property="og:url" content="http://yoursite.com/tags/https/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/HTTPS/index.html">
 <meta property="og:site_name" content="奔跑中逆袭">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/https/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/HTTPS/"/>
 
 
 
 
 
-  <title>标签: https | 奔跑中逆袭</title>
+  <title>标签: HTTPS | 奔跑中逆袭</title>
   
 
 
@@ -280,7 +280,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>https<small>标签</small>
+        <h1>HTTPS<small>标签</small>
         </h1>
       </div>
 
@@ -292,37 +292,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/12/02/SSL-TLS/" itemprop="url">
+            <a class="post-title-link" href="/2016/10/15/https-safety/" itemprop="url">
               
-                <span itemprop="name">SSL/TLS 握手过程详解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-12-02T21:28:17+08:00"
-              content="2016-12-02" >
-          12-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/16/http-https/" itemprop="url">
-              
-                <span itemprop="name">从HTTP到HTTPS-什么是HTTPS</span>
+                <span itemprop="name">HTTPS 互联网世界的安全基础</span>
               
             </a>
         
@@ -330,9 +302,9 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-16T19:50:21+08:00"
-              content="2016-10-16" >
-          10-16
+              datetime="2016-10-15T10:14:43+08:00"
+              content="2016-10-15" >
+          10-15
         </time>
       </div>
 
@@ -634,32 +606,16 @@
 
   
 
+
   
+
     
-  
-
-  <script type="text/javascript">
-    var duoshuoQuery = {short_name:"keeplonely"};
-    (function() {
-      var ds = document.createElement('script');
-      ds.type = 'text/javascript';ds.async = true;
-      ds.id = 'duoshuo-script';
-      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-      ds.charset = 'UTF-8';
-      (document.getElementsByTagName('head')[0]
-      || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-  </script>
-
-  
+      <script id="dsq-count-scr" src="https://fengbaby.disqus.com/count.js" async></script>
     
+
     
-    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
-    <script src="/js/src/hook-duoshuo.js"></script>
+
   
-
-
-
 
 
 
@@ -1080,6 +1036,44 @@
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
+oud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
