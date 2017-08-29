@@ -96,7 +96,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="奔跑中逆袭">
-<meta property="og:url" content="http://yoursite.com/tags/html5/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/HTML5/index.html">
 <meta property="og:site_name" content="奔跑中逆袭">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/html5/"/>
+  <link rel="canonical" href="http://yoursite.com/tags/HTML5/"/>
 
 
 
 
 
-  <title>标签: html5 | 奔跑中逆袭</title>
+  <title>标签: HTML5 | 奔跑中逆袭</title>
   
 
 
@@ -280,7 +280,7 @@
 
     <div id="posts" class="posts-collapse">
       <div class="collection-title">
-        <h1>html5<small>标签</small>
+        <h1>HTML5<small>标签</small>
         </h1>
       </div>
 
@@ -292,9 +292,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2016/09/30/html-label/" itemprop="url">
+            <a class="post-title-link" href="/2016/10/15/html-knowledge/" itemprop="url">
               
-                <span itemprop="name">HTML5标签</span>
+                <span itemprop="name">html5知识</span>
               
             </a>
         
@@ -302,9 +302,37 @@
 
       <div class="post-meta">
         <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-30T21:01:10+08:00"
-              content="2016-09-30" >
-          09-30
+              datetime="2016-10-15T21:34:41+08:00"
+              content="2016-10-15" >
+          10-15
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2016/10/03/iframe/" itemprop="url">
+              
+                <span itemprop="name">iframe关于滚动条的去除和保留</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-10-03T14:28:02+08:00"
+              content="2016-10-03" >
+          10-03
         </time>
       </div>
 
@@ -366,7 +394,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-count">54</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -543,6 +571,8 @@
   
 
 
+  
+
 
 
 
@@ -570,6 +600,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
@@ -1036,44 +1069,6 @@
               success: function(newcounter) {
                 var $element = $(document.getElementById(url));
                 $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-</body>
-</html>
-  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
               },
               error: function(newcounter, error) {
                 console.log('Failed to create');
