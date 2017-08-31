@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="奔跑中逆袭">
 <meta property="og:description" content="1、增加12INSERT INTO 表的名字(字段一,字段二,字段三) VALUES (&amp;quot;值一&amp;quot;,&amp;quot;值二&amp;quot;,&amp;quot;值三&amp;quot;);INSERT INTO users(username,pwd,age) VALUES (&amp;quot;YANG&amp;quot;,&amp;quot;43214321&amp;quot;,&amp;quot;43&amp;quot;); 2、删除12345DE">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2016-12-08T11:08:06.000Z">
+<meta property="og:updated_time" content="2017-08-31T03:59:16.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mySQL基础语法-增删改查">
 <meta name="twitter:description" content="1、增加12INSERT INTO 表的名字(字段一,字段二,字段三) VALUES (&amp;quot;值一&amp;quot;,&amp;quot;值二&amp;quot;,&amp;quot;值三&amp;quot;);INSERT INTO users(username,pwd,age) VALUES (&amp;quot;YANG&amp;quot;,&amp;quot;43214321&amp;quot;,&amp;quot;43&amp;quot;); 2、删除12345DE">
@@ -386,6 +386,8 @@
 <h2 id="3、修改"><a href="#3、修改" class="headerlink" title="3、修改"></a>3、修改</h2><pre><code>UPDATE 表的名字 SET 设置的内容 WHERE 条件语句;
 </code></pre><h2 id="4、查询"><a href="#4、查询" class="headerlink" title="4、查询"></a>4、查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT 字段 FROM 表头 WHERE 条件语句(username=&quot;张三&quot; AND id&gt;2);</div><div class="line">SELECT * FROM users WHERE id&gt;2 LIMIT 2,1;		// 条件ID大于二的  LIMIT开始从第二个数据开始查询一个</div><div class="line">SELECT * FROM users LIMIT 2,2;		// 从第二个数据开始查询两个</div><div class="line">SELECT * FROM users ORDER BY id DESC	// 倒叙排列的查询</div><div class="line">SELECT * FROM users ORDER BY id ASC;	// 正序排列的查询</div></pre></td></tr></table></figure>
 <h2 id="5、联表查询-将两张表联起来进行查询"><a href="#5、联表查询-将两张表联起来进行查询" class="headerlink" title="5、联表查询:将两张表联起来进行查询"></a>5、联表查询:将两张表联起来进行查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT * FROM 表名1 JOIN 表名2 ON 条件;</div><div class="line">SELECT * FROM users AS u JOIN product AS P ON u.id=p.id;</div><div class="line">SELECT * FROM product LEFT JOIN users ON users.id=product.id;</div><div class="line">SELECT users.id,users.username,product.name FROM users LEFT JOIN product ON users.id=product.id;</div></pre></td></tr></table></figure>
+<p>转载标明出处或联系：1328271467 &amp; zjfbaby@icloud.com &amp; 1328271467@qq.com</p>
+
       
     </div>
     
@@ -544,7 +546,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">55</span>
+                <span class="site-state-item-count">56</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -557,7 +559,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

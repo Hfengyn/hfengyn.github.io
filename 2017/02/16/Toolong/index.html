@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="奔跑中逆袭">
 <meta property="og:description" content="文本溢出省略显示因为网页排版的需要，有些地方需要过长的问题加上省略号。比如：标题限制20个中文的宽度，超出的就用省略号代替。之前会使用程序截取的方法，不过使用css来截取更有利于SEO。 首先实现单行缩略是可以通过下面的代码实现的（部分浏览器需要设置宽度）： 123overflow: hidden;     /*内容会被修剪，并且其余内容是不可见的。*/text-overflow: ellipsi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-30T06:46:07.564Z">
+<meta property="og:updated_time" content="2017-08-31T04:00:01.375Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS文本、单词过长强制换行">
 <meta name="twitter:description" content="文本溢出省略显示因为网页排版的需要，有些地方需要过长的问题加上省略号。比如：标题限制20个中文的宽度，超出的就用省略号代替。之前会使用程序截取的方法，不过使用css来截取更有利于SEO。 首先实现单行缩略是可以通过下面的代码实现的（部分浏览器需要设置宽度）： 123overflow: hidden;     /*内容会被修剪，并且其余内容是不可见的。*/text-overflow: ellipsi">
@@ -390,7 +390,7 @@
 <h3 id="其他浏览器的解决方案"><a href="#其他浏览器的解决方案" class="headerlink" title="其他浏览器的解决方案"></a>其他浏览器的解决方案</h3><p>目前没有什么CSS的属性可以直接控制多行文本的省略显示，比较靠谱的办法应该就是利用相对定位在最后面加上一个省略号了，代码可以参考下面：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">p&#123;</div><div class="line">    position:relative;</div><div class="line">    line-height:1.5em;</div><div class="line">    /* 高度为需要显示的行数*行高，比如这里我们显示两行，则为3 */</div><div class="line">    height:3em;</div><div class="line">    overflow:hidden;</div><div class="line">&#125;</div><div class="line">p:after&#123;</div><div class="line">    content:&quot;...&quot;;</div><div class="line">    position:absolute;</div><div class="line">    bottom:0;</div><div class="line">    right:0;</div><div class="line">    padding: 0 5px;</div><div class="line">    background-color: #fff;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="扩展知识"><a href="#扩展知识" class="headerlink" title="扩展知识"></a>扩展知识</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">white-space: normal|pre|nowrap|pre-wrap|pre-line|inherit;</div><div class="line">white-space 属性设置如何处理元素内的空白</div><div class="line">normal 默认。空白会被浏览器忽略。</div><div class="line">pre 空白会被浏览器保留。其行为方式类似 HTML 中的 pre 标签。</div><div class="line">nowrap 文本不会换行，文本会在在同一行上继续，直到遇到 br 标签为止。</div><div class="line">pre-wrap 保留空白符序列，但是正常地进行换行。</div><div class="line">pre-line 合并空白符序列，但是保留换行符。</div><div class="line">inherit 规定应该从父元素继承 white-space 属性的值。</div><div class="line"></div><div class="line">word-wrap: normal|break-word;</div><div class="line">word-wrap 属性用来标明是否允许浏览器在单词内进行断句，这是为了防止当一个字符串太长而找不到它的自然断句点时产生溢出现象。</div><div class="line">normal: 只在允许的断字点换行(浏览器保持默认处理)</div><div class="line">break-word:在长单词或URL地址内部进行换行</div><div class="line">word-break: normal|break-all|keep-all;</div><div class="line"></div><div class="line">word-break 属性用来标明怎么样进行单词内的断句。</div><div class="line">normal：使用浏览器默认的换行规则。</div><div class="line">break-all:允许再单词内换行</div><div class="line">keep-all:只能在半角空格或连字符处换行</div></pre></td></tr></table></figure>
-<p>转载前联系：1328271467 &amp; zjfbaby@icloud.com &amp; 1328271467@qq.com</p>
+<p>转载标明出处或联系：1328271467 &amp; zjfbaby@icloud.com &amp; 1328271467@qq.com</p>
 
       
     </div>
@@ -459,6 +459,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/11/php-access/" rel="prev" title="php连接Access数据库">
+                php连接Access数据库 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -544,7 +548,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">55</span>
+                <span class="site-state-item-count">56</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -557,7 +561,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
