@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[部分电脑基础技能]]></title>
+    <url>%2F2017%2F04%2F20%2FBasic-skills%2F</url>
+    <content type="text"><![CDATA[运行命令功能电脑注销快捷键win+r打开运行窗口 然后输入logoff，确认 windows自带卸载软件快捷键win+r打开运行窗口 然后输入appwiz.cpl，确认 设置定时关机快捷键win+r打开运行窗口 然后输入shutdown -s -t 3600，确认 取消定时关机快捷键win+r打开运行窗口 然后输入shutdown -a，确认 windows自带计时器快捷键win+r打开运行窗口 然后输入calc，确认 windows自带录屏工具快捷键win+r打开运行窗口 然后输入psr.exe，确认 windows自带远程连接快捷键win+r打开运行窗口 然后输入mstsc，确认 windows自带记事本快捷键win+r打开运行窗口 然后输入notepad，确认 快捷键功能CTRL组合键 Ctrl + A ———— 全选 Ctrl + C ———— 复制 Ctrl + D ———— 网页收藏 Ctrl + F ———— 查找 Ctrl + C ———— 复制 Ctrl + N ———— 新窗口 Ctrl + R ———— 网页刷新 Ctrl + S ———— 保存 Ctrl + T ———— 打开新网页 Ctrl + V ———— 粘贴 Ctrl + W ———— 关闭当前窗口 Ctrl + X ———— 剪贴 Ctrl + Y ———— 恢复上一步操作 Ctrl + Z ———— 撤消上一步操作 F键 F1 ———— 帮助 F2 ———— 重命名 F3 ———— 搜索 F4 ———— 显示我的电脑和Windows 资源管理器中的地址栏列表。 F5 ———— 刷新 F6 ———— 在窗口或桌面上循环切换屏幕元素。 F7 ———— DoS下专用功能 F8 ———— Windows启动选项 F9 ———— Excel中计算公式 F10 ———— 激活菜单栏（当可用时） F11 ———— 切换全屏 F12 ———— Word 里另存文档 Win键 Win + D ———— 显示桌面 Win + E ———— 打开我的电脑 Win + F ———— 查找所以文件 Win + L ———— 锁屏 Win + M ———— 最小化窗口 Win + R ———— 运行命令 Win + U ———— 辅助工具 其它功能键 Delete ———— 删除 Shift + Delete ———— 永久删除所 Ctrl + shift + T ———— 恢复误删的网页 Alt + F4 ———— 关闭当前项目或者关闭计算机 Alt + Tab ———— 在打开的项目之间切换 Ctrl + Tab ———— 在选项卡之间向前移动 Ctrl + Shift + Tab ———— 在选项卡之间向后移动 转载标明出处或联系：1328271467 &amp; zjfbaby@icloud.com &amp; 1328271467@qq.com]]></content>
+      <tags>
+        <tag>技能</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[php连接Access数据库]]></title>
     <url>%2F2017%2F03%2F11%2Fphp-access%2F</url>
     <content type="text"><![CDATA[最近需要把PHP的网站连接数据库，无奈数据库是access。我们都知道，PHP+MySQL，asp+access数据库，然而PHP+access数据库我还真没连接过。我在网上找了一堆PHP+access数据库的连接方式，然而并没什么软用。最后还是让我找了一个，经过修改可以正常连接数据库了。 1234567891011121314151617181920// 编码格式header(&quot;Content-type: text/html; charset=utf-8&quot;);$connstr=&quot;DRIVER=&#123;Microsoft Access Driver (*.mdb)&#125;; DBQ=&quot; . realpath(&quot;你的数据库路径&quot;);$connid=odbc_connect($connstr,&quot;&quot;,&quot;&quot;,SQL_CUR_USE_ODBC);// sql语句$sql1=&quot;select top 1 * from KS_Article where Tid=&apos;20155258952919&apos; order by id desc&quot;;// 获取信息$result1=odbc_exec($connid,$sql1);$arr1=array();while($r = odbc_fetch_array($result1))&#123; foreach ($r as $key =&gt; $value) &#123; $r[$key]=mb_convert_encoding($value, &quot;utf-8&quot;,&quot;gbk&quot;); &#125; array_push($arr1,$r);&#125; 转载标明出处或联系：1328271467 &amp; zjfbaby@icloud.com &amp; 1328271467@qq.com]]></content>
