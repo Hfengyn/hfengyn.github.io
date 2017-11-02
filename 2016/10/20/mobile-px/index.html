@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/yoUtND4A8Wh*pDn88HVkkuQIAii1L8hEcz8Wg0Qetc0!/b/dNwAAAAAAAAA&bo=WgEqAFoBKgADACU!&rf=viewer_4">
 <meta property="og:image" content="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/CR7hNLZBWPI*KnlE*pm7AwstnWbmizOgyR*K9gEb8o0!/b/dHkBAAAAAAAA&bo=OgGiADoBogADACU!&rf=viewer_4">
 <meta property="og:image" content="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/YVB3Ccw7ScE5CAsYcPRUWt5UlK9Rl91HKoeF.wTsyL4!/b/dOMAAAAAAAAA&bo=DANNAQwDTQEDACU!&rf=viewer_4">
-<meta property="og:updated_time" content="2016-11-29T12:07:22.000Z">
+<meta property="og:updated_time" content="2017-11-02T01:53:50.742Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动WEB像素相关知识">
 <meta name="twitter:description" content="移动WEB像素相关知识了解移动web像素的知识，主要是为了切图时心中有数。本文主要围绕一个问题：怎样根据设备厂商提供的屏幕尺寸和物理像素得到我们切图需要的逻辑像素？围绕这个问题以iphone5为例讲解涉及到的web像素相关知识。 一、前置知识1、 iphone5的相关参数    iPhone5 参数     处理器 苹果A6处理器，1.3Ghz   屏幕 四英寸1136 × 640 Retina">
@@ -442,22 +442,22 @@
 <p>在计算机显示设备参数描述上，二者意思一致。</p>
 <p>PPI越高，像素数越高，图像越清晰</p>
 <p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/6JerZ.kzXy2HDWvsunGJXgWFDzAW9B6dKgAk7gBulzg!/b/dHgBAAAAAAAA&amp;bo=VgK0AFYCtAADByI!&amp;rf=viewer_4" alt="Mou icon"></p>
-<h4 id="2-1PPI和默认缩放比DPR的关系"><a href="#2-1PPI和默认缩放比DPR的关系" class="headerlink" title="2.1PPI和默认缩放比DPR的关系"></a>2.1PPI和默认缩放比DPR的关系</h4><p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/rRnlD5jr4xB1Ux9gISuKAYzb3MUYm5vZLXMHO0MnGPQ!/b/dOUAAAAAAAAA&amp;bo=vgKHAL4ChwADACU!&amp;rf=viewer_4" alt="Mou icon"></p>
+<h3 id="2-1PPI和默认缩放比DPR的关系"><a href="#2-1PPI和默认缩放比DPR的关系" class="headerlink" title="2.1PPI和默认缩放比DPR的关系"></a>2.1PPI和默认缩放比DPR的关系</h3><p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/rRnlD5jr4xB1Ux9gISuKAYzb3MUYm5vZLXMHO0MnGPQ!/b/dOUAAAAAAAAA&amp;bo=vgKHAL4ChwADACU!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>Retina屏（高清屏）：dpr都是大于等于2</p>
 <p>由对应关系可以看出，PPI越高，系统默认设置缩放比越大，可视度越低（小）。</p>
-<h4 id="2-2计算iphone5的PPI"><a href="#2-2计算iphone5的PPI" class="headerlink" title="2.2计算iphone5的PPI"></a>2.2计算iphone5的PPI</h4><p>由前置知识能得知iphone5的像素信息：四英寸1136 × 640 Retina Display</p>
+<h3 id="2-2计算iphone5的PPI"><a href="#2-2计算iphone5的PPI" class="headerlink" title="2.2计算iphone5的PPI"></a>2.2计算iphone5的PPI</h3><p>由前置知识能得知iphone5的像素信息：四英寸1136 × 640 Retina Display</p>
 <p>首先根据勾股定理计算出iphone5手机屏幕的对角线等效像素，然后除以对角线(4英寸)，就得到PPI为326.</p>
 <p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/Ci*E1EjtHDne.ZwgHksGARK2Oway6djbbZtoMgcfqfg!/b/dOUAAAAAAAAA&amp;bo=IwI6ACMCOgADACU!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>注意一点：计算时用的是物理像素，而不是px。</p>
 <p><strong>根据3.1的对应关系，可知iphone5的ppi为326对应的屏幕缩放比dpr为2</strong></p>
-<h4 id="2-3通过window获取设备的dpr【update20161125】"><a href="#2-3通过window获取设备的dpr【update20161125】" class="headerlink" title="2.3通过window获取设备的dpr【update20161125】"></a>2.3通过window获取设备的dpr【update20161125】</h4><p>在移动端浏览器中及某些桌面浏览器中，window对象有一个devicePixelRatio属性，我们可以通过window.devicePixelRatio直接获取到设备的dpr。</p>
+<h3 id="2-3通过window获取设备的dpr【update20161125】"><a href="#2-3通过window获取设备的dpr【update20161125】" class="headerlink" title="2.3通过window获取设备的dpr【update20161125】"></a>2.3通过window获取设备的dpr【update20161125】</h3><p>在移动端浏览器中及某些桌面浏览器中，window对象有一个devicePixelRatio属性，我们可以通过window.devicePixelRatio直接获取到设备的dpr。</p>
 <p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/MC1cuO8SOTvV*f6ra4qMjORyya8Yim1X5H9.mQFHY*o!/b/dHgBAAAAAAAA&amp;bo=xALmAMQC5gADACU!&amp;rf=viewer_4" alt="Mou icon"></p>
 <h2 id="3、dpx表示px和物理像素dp的关系"><a href="#3、dpx表示px和物理像素dp的关系" class="headerlink" title="3、dpx表示px和物理像素dp的关系"></a>3、dpx表示px和物理像素dp的关系</h2><p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/yoUtND4A8Wh*pDn88HVkkuQIAii1L8hEcz8Wg0Qetc0!/b/dNwAAAAAAAAA&amp;bo=WgEqAFoBKgADACU!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>我们已经知道iphone5的dpr为2，给出一个像素在iphone5中的形象图如下：</p>
 <p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/CR7hNLZBWPI*KnlE*pm7AwstnWbmizOgyR*K9gEb8o0!/b/dHkBAAAAAAAA&amp;bo=OgGiADoBogADACU!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>这个图可以从2个角度理解</p>
 <p>平面上：1px等于2的平方<em>dp<br>横向维度或者竖向维度上：1px等于2</em>dp</p>
-<h4 id="3-1计算iphone5的逻辑像素"><a href="#3-1计算iphone5的逻辑像素" class="headerlink" title="3.1计算iphone5的逻辑像素"></a>3.1计算iphone5的逻辑像素</h4><p>由前置知识能得知iphone5的像素信息：四英寸1136 × 640 Retina Display</p>
+<h3 id="3-1计算iphone5的逻辑像素"><a href="#3-1计算iphone5的逻辑像素" class="headerlink" title="3.1计算iphone5的逻辑像素"></a>3.1计算iphone5的逻辑像素</h3><p>由前置知识能得知iphone5的像素信息：四英寸1136 × 640 Retina Display</p>
 <p>现在也已经知道iphone5的dpx为2，再根据上面的计算公式可以算出针对iphone5切图时其逻辑像素为：320px*568px。</p>
 <h2 id="4、由设备分辨率得到屏幕分辨率"><a href="#4、由设备分辨率得到屏幕分辨率" class="headerlink" title="4、由设备分辨率得到屏幕分辨率"></a>4、由设备分辨率得到屏幕分辨率</h2><p>整个关系串联起来如下：</p>
 <p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/YVB3Ccw7ScE5CAsYcPRUWt5UlK9Rl91HKoeF.wTsyL4!/b/dOMAAAAAAAAA&amp;bo=DANNAQwDTQEDACU!&amp;rf=viewer_4" alt="Mou icon"></p>
@@ -475,7 +475,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>本人是穷鬼，您的支持将鼓励我变富裕！</div>
+  <div>本人穷鬼，您的支持将鼓励我富裕！</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>Donate</span>
   </button>
@@ -761,7 +761,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#移动WEB像素相关知识"><span class="nav-number">1.</span> <span class="nav-text">移动WEB像素相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、前置知识"><span class="nav-number">1.1.</span> <span class="nav-text">一、前置知识</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、像素相关名词和名词之间的关系"><span class="nav-number">2.</span> <span class="nav-text">二、像素相关名词和名词之间的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、px-dp和dpr"><span class="nav-number">2.1.</span> <span class="nav-text">1、px,dp和dpr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、DPI和PPI"><span class="nav-number">2.2.</span> <span class="nav-text">2、DPI和PPI</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1PPI和默认缩放比DPR的关系"><span class="nav-number">2.2.0.1.</span> <span class="nav-text">2.1PPI和默认缩放比DPR的关系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2计算iphone5的PPI"><span class="nav-number">2.2.0.2.</span> <span class="nav-text">2.2计算iphone5的PPI</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3通过window获取设备的dpr【update20161125】"><span class="nav-number">2.2.0.3.</span> <span class="nav-text">2.3通过window获取设备的dpr【update20161125】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、dpx表示px和物理像素dp的关系"><span class="nav-number">2.3.</span> <span class="nav-text">3、dpx表示px和物理像素dp的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1计算iphone5的逻辑像素"><span class="nav-number">2.3.0.1.</span> <span class="nav-text">3.1计算iphone5的逻辑像素</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、由设备分辨率得到屏幕分辨率"><span class="nav-number">2.4.</span> <span class="nav-text">4、由设备分辨率得到屏幕分辨率</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#移动WEB像素相关知识"><span class="nav-number">1.</span> <span class="nav-text">移动WEB像素相关知识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、前置知识"><span class="nav-number">1.1.</span> <span class="nav-text">一、前置知识</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、像素相关名词和名词之间的关系"><span class="nav-number">2.</span> <span class="nav-text">二、像素相关名词和名词之间的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、px-dp和dpr"><span class="nav-number">2.1.</span> <span class="nav-text">1、px,dp和dpr</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、DPI和PPI"><span class="nav-number">2.2.</span> <span class="nav-text">2、DPI和PPI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1PPI和默认缩放比DPR的关系"><span class="nav-number">2.2.1.</span> <span class="nav-text">2.1PPI和默认缩放比DPR的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2计算iphone5的PPI"><span class="nav-number">2.2.2.</span> <span class="nav-text">2.2计算iphone5的PPI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3通过window获取设备的dpr【update20161125】"><span class="nav-number">2.2.3.</span> <span class="nav-text">2.3通过window获取设备的dpr【update20161125】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、dpx表示px和物理像素dp的关系"><span class="nav-number">2.3.</span> <span class="nav-text">3、dpx表示px和物理像素dp的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1计算iphone5的逻辑像素"><span class="nav-number">2.3.1.</span> <span class="nav-text">3.1计算iphone5的逻辑像素</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、由设备分辨率得到屏幕分辨率"><span class="nav-number">2.4.</span> <span class="nav-text">4、由设备分辨率得到屏幕分辨率</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/vApN*y0qVAKORFjzyI8tXBf1FnUcWubBxkxPjmW5sOo!/b/dAsBAAAAAAAA&bo=ogFAAaIBQAEDACU!&rf=viewer_4">
 <meta property="og:image" content="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/81WCYRl1OiOcDjYxRWryxDV4wzsivPqLI0nvRJE1lg0!/b/dHwBAAAAAAAA&bo=yQHZAMkB2QADACU!&rf=viewer_4">
 <meta property="og:image" content="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/yMo9q6awZ7lY2b*9djKT0UcmiNhqMVdfMdKCI9CwgkM!/b/dOEAAAAAAAAA&bo=9gH3APYB9wADACU!&rf=viewer_4">
-<meta property="og:updated_time" content="2016-11-24T12:09:48.000Z">
+<meta property="og:updated_time" content="2017-11-02T01:48:25.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS Float 以及相关布局模式">
 <meta name="twitter:description" content="float 取值    属性 值 描述      left 向左浮动    right 向右浮动    none 默认值    inherit 继承    看一个例子: 红色线框代表父元素  脱离文档流，其实也没有完全脱离，会被父元素的边界挡住。 float的元素在同一文档流看一个例子: 红线框代表父元素  三个子元素『向左浮动』之后， 父元素就没有内容了，所以父元素没有高度了。 float元素半">
@@ -424,11 +424,11 @@
 <p>红色线框代表父元素</p>
 <p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/*MqPN*GtPQlZbToYkwtvTxCLBU6ou0CuCFfSuJGd09U!/b/dAoBAAAAAAAA&amp;bo=kAKeAZACngEDByI!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>脱离文档流，其实也没有完全脱离，会被父元素的边界挡住。</p>
-<h5 id="float的元素在同一文档流"><a href="#float的元素在同一文档流" class="headerlink" title="float的元素在同一文档流"></a>float的元素在同一文档流</h5><p><strong>看一个例子:</strong></p>
+<h2 id="float的元素在同一文档流"><a href="#float的元素在同一文档流" class="headerlink" title="float的元素在同一文档流"></a>float的元素在同一文档流</h2><p><strong>看一个例子:</strong></p>
 <p>红线框代表父元素</p>
 <p><img src="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/Z91jcqiVC58o2Sr9S8E98sKllY6O4L39IMoTvlz7GF0!/b/dHEBAAAAAAAA&amp;bo=hwRCAYcEQgEDACU!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>三个子元素『向左浮动』之后， 父元素就没有内容了，所以父元素没有高度了。</p>
-<h5 id="float元素半脱离文档流"><a href="#float元素半脱离文档流" class="headerlink" title="float元素半脱离文档流"></a>float元素半脱离文档流</h5><p>对元素，脱离文档流；对内容，在文档流。元素时会重叠，但是内容不会重叠。</p>
+<h2 id="float元素半脱离文档流"><a href="#float元素半脱离文档流" class="headerlink" title="float元素半脱离文档流"></a>float元素半脱离文档流</h2><p>对元素，脱离文档流；对内容，在文档流。元素时会重叠，但是内容不会重叠。</p>
 <p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/suEsxMw4DyEQWGYj9pLKt5CTQ00PY1KHPu84lOgLxdQ!/b/dAoBAAAAAAAA&amp;bo=LgSfAC4EnwADACU!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p><strong>举个例子：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">	width: 300px;padding: 5px;line-height: 1.6;</div><div class="line">	border: 1px dashed blue;</div><div class="line">&#125;</div><div class="line">.sample&#123;</div><div class="line">	height: 100px;margin-right: 5px;</div><div class="line">	padding: 0 5px; line-height: 100px;background-color: pink;</div><div class="line">&#125;</div><div class="line">.sb&#123;</div><div class="line">	outline: 1px dashed  red;</div><div class="line">&#125;</div><div class="line">.sample&#123;</div><div class="line">	float: left;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;div class=&quot;sample&quot;&gt;float : left &lt;/div&gt;</div><div class="line">&lt;div class=&quot;sb&quot;&gt;</div><div class="line">A float is a box that is shifted to the left or right on the current line .</div><div class="line">the most interesting characteristic of a float (o &quot;floated&quot; o &quot;floating&quot; box)</div><div class="line">is that content may flow along its side (or be prohibited from doing so by the &apos;clear&apos;</div><div class="line">property).</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
@@ -474,7 +474,7 @@
 </table>
 <p>①应用于后续元素, 来清除浮动对后续的影响。</p>
 <p>②应用于块级元素</p>
-<h5 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h5><p>增加一个空白元素(用得较少)</p>
+<h3 id="使用方式："><a href="#使用方式：" class="headerlink" title="使用方式："></a>使用方式：</h3><p>增加一个空白元素(用得较少)</p>
 <p>clearfix，这是一般通用方案。实际上是用一个不可用的点号，来清除浮动。</p>
 <p><strong>举个例子：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">body&#123;</div><div class="line">	width: 400px;line-height: 1.6;</div><div class="line">&#125;</div><div class="line">.sample&#123;</div><div class="line">	width: 100px;line-height: 100px;</div><div class="line">	margin: 3px;text-align: center;</div><div class="line">	background-color: pink;</div><div class="line">&#125;</div><div class="line">.sb&#123;</div><div class="line">	margin: 10px auto; padding: 5px; border: 1px dashed #0f00fa;</div><div class="line">&#125;</div><div class="line">.sample&#123;</div><div class="line">	float: left;</div><div class="line">&#125;</div><div class="line">.clearfix:after&#123;</div><div class="line">	content: &apos;.&apos;;     /* 在clearfix后面加入一个 . */</div><div class="line">	display: block; /* 设置 . 块级元素 */</div><div class="line">	clear: both;  /* 清除浮动效果 */</div><div class="line"></div><div class="line">	/*隐藏那个 .  */</div><div class="line">	height: 0;       </div><div class="line">	overflow: hidden;</div><div class="line">	visibility: hidden;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/*    .clearfix&#123;</div><div class="line">	zoom: 1; 由于在IE 低版本中，不支持after属性，所以需要增加zoom属性 </div><div class="line">&#125; */</div><div class="line"></div><div class="line">&lt;div class=&quot;sb clearfix&quot;&gt;</div><div class="line">	&lt;div class=&quot;sample&quot;&gt;float: left;&lt;/div&gt;</div><div class="line">	第十二届ChinaJoy 动漫游戏展7月31号在上海新国际博览中心开幕，导出是站台表演的帅哥美女。</div><div class="line">&lt;/div&gt;</div><div class="line">&lt;div class=&quot;sb&quot;&gt;</div><div class="line">	有些游戏商为了吸引人气，还请来了著名的演员、模特前来助阵。以下是一批漂亮的Show Girl现场照片。</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
@@ -493,7 +493,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>本人是穷鬼，您的支持将鼓励我变富裕！</div>
+  <div>本人穷鬼，您的支持将鼓励我富裕！</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>Donate</span>
   </button>
@@ -781,7 +781,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#float的元素在同一文档流"><span class="nav-number">1.</span> <span class="nav-text">float的元素在同一文档流</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#float元素半脱离文档流"><span class="nav-number">2.</span> <span class="nav-text">float元素半脱离文档流</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clear"><span class="nav-number"></span> <span class="nav-text">clear</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用方式："><span class="nav-number">1.</span> <span class="nav-text">使用方式：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#float的元素在同一文档流"><span class="nav-number">1.</span> <span class="nav-text">float的元素在同一文档流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#float元素半脱离文档流"><span class="nav-number">2.</span> <span class="nav-text">float元素半脱离文档流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clear"><span class="nav-number">3.</span> <span class="nav-text">clear</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用方式："><span class="nav-number">3.1.</span> <span class="nav-text">使用方式：</span></a></li></ol></li></ol></div>
             
 
           </div>

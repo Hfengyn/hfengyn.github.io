@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="奔跑中逆袭">
 <meta property="og:description" content="iframe嵌入页面后，我们有时需要调整滚动条，例如，去掉全部的滚动条，去掉右边的滚动条且保留底下的滚动条，去掉底下的滚动条且保留右边的滚动条。那么我们应该怎么做呢？ 一：去掉全部的滚动条第一个方法：   iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。scrolling : auto —–在需要的时候滚动条出现 scrolling : yes ——始终">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2016-11-26T13:10:40.000Z">
+<meta property="og:updated_time" content="2017-11-02T01:46:51.331Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iframe关于滚动条的去除和保留">
 <meta name="twitter:description" content="iframe嵌入页面后，我们有时需要调整滚动条，例如，去掉全部的滚动条，去掉右边的滚动条且保留底下的滚动条，去掉底下的滚动条且保留右边的滚动条。那么我们应该怎么做呢？ 一：去掉全部的滚动条第一个方法：   iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。scrolling : auto —–在需要的时候滚动条出现 scrolling : yes ——始终">
@@ -382,11 +382,11 @@
 
       
         <p>iframe嵌入页面后，我们有时需要调整滚动条，例如，去掉全部的滚动条，去掉右边的滚动条且保留底下的滚动条，去掉底下的滚动条且保留右边的滚动条。那么我们应该怎么做呢？</p>
-<h2 id="一：去掉全部的滚动条"><a href="#一：去掉全部的滚动条" class="headerlink" title="一：去掉全部的滚动条"></a>一：去掉全部的滚动条</h2><h4 id="第一个方法：-iframe-有一个scrolling属性，它有-auto-yes-no-这三个值。"><a href="#第一个方法：-iframe-有一个scrolling属性，它有-auto-yes-no-这三个值。" class="headerlink" title="第一个方法：   iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。"></a>第一个方法：   iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。</h4><p>scrolling : auto —–在需要的时候滚动条出现</p>
+<h2 id="一：去掉全部的滚动条"><a href="#一：去掉全部的滚动条" class="headerlink" title="一：去掉全部的滚动条"></a>一：去掉全部的滚动条</h2><h3 id="第一个方法：-iframe-有一个scrolling属性，它有-auto-yes-no-这三个值。"><a href="#第一个方法：-iframe-有一个scrolling属性，它有-auto-yes-no-这三个值。" class="headerlink" title="第一个方法：   iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。"></a>第一个方法：   iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。</h3><p>scrolling : auto —–在需要的时候滚动条出现</p>
 <p>scrolling : yes ——始终显示滚动条</p>
 <p>scrolling : no ——-始终隐藏滚动条</p>
 <p>当设置   scrolling : no 时，全部的滚动条就没有了。</p>
-<h4 id="第二个方法：我发现除了-scrolling-可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置-body-overflow：hidden-，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。"><a href="#第二个方法：我发现除了-scrolling-可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置-body-overflow：hidden-，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。" class="headerlink" title="第二个方法：我发现除了 scrolling 可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置 body{overflow：hidden}，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。"></a>第二个方法：我发现除了 scrolling 可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置 body{overflow：hidden}，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。</h4><h2 id="二：去掉右边的滚动条且保留底下的滚动条"><a href="#二：去掉右边的滚动条且保留底下的滚动条" class="headerlink" title="二：去掉右边的滚动条且保留底下的滚动条"></a>二：去掉右边的滚动条且保留底下的滚动条</h2><p>如果只想保留底下的滚动条，那么可以在嵌入的页面里设置 body{overflow-x：auto ; overflow-y：hidden;}</p>
+<h3 id="第二个方法：我发现除了-scrolling-可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置-body-overflow：hidden-，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。"><a href="#第二个方法：我发现除了-scrolling-可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置-body-overflow：hidden-，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。" class="headerlink" title="第二个方法：我发现除了 scrolling 可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置 body{overflow：hidden}，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。"></a>第二个方法：我发现除了 scrolling 可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置 body{overflow：hidden}，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。</h3><h2 id="二：去掉右边的滚动条且保留底下的滚动条"><a href="#二：去掉右边的滚动条且保留底下的滚动条" class="headerlink" title="二：去掉右边的滚动条且保留底下的滚动条"></a>二：去掉右边的滚动条且保留底下的滚动条</h2><p>如果只想保留底下的滚动条，那么可以在嵌入的页面里设置 body{overflow-x：auto ; overflow-y：hidden;}</p>
 <h2 id="三：去掉底下的滚动条且保留右边的滚动条"><a href="#三：去掉底下的滚动条且保留右边的滚动条" class="headerlink" title="三：去掉底下的滚动条且保留右边的滚动条"></a>三：去掉底下的滚动条且保留右边的滚动条</h2><p>在嵌入的页面里设置 body{overflow-x：hidden；overflow-y：auto；}</p>
 <p>我们已经知道了这两个属性都可以设置滚动条的显示和隐藏，那么当两个同时设置时，会出现哪个效果呢？</p>
 <p>通过检测，我发现当<strong>scrolling = “ auto “</strong>或者<strong>“ yes “</strong>时，如果设置了<strong>body</strong>，那么就会使用body里的设置；当<strong>scrolling = “ no “</strong>时，不管<strong>body</strong>设置了什么，都会使用<strong>scrolling</strong>的设置，即全部的滚动条都被去掉了。</p>
@@ -404,7 +404,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>本人是穷鬼，您的支持将鼓励我变富裕！</div>
+  <div>本人穷鬼，您的支持将鼓励我富裕！</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>Donate</span>
   </button>
@@ -690,7 +690,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一：去掉全部的滚动条"><span class="nav-number">1.</span> <span class="nav-text">一：去掉全部的滚动条</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一个方法：-iframe-有一个scrolling属性，它有-auto-yes-no-这三个值。"><span class="nav-number">1.0.1.</span> <span class="nav-text">第一个方法：   iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二个方法：我发现除了-scrolling-可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置-body-overflow：hidden-，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。"><span class="nav-number">1.0.2.</span> <span class="nav-text">第二个方法：我发现除了 scrolling 可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置 body{overflow：hidden}，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二：去掉右边的滚动条且保留底下的滚动条"><span class="nav-number">2.</span> <span class="nav-text">二：去掉右边的滚动条且保留底下的滚动条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三：去掉底下的滚动条且保留右边的滚动条"><span class="nav-number">3.</span> <span class="nav-text">三：去掉底下的滚动条且保留右边的滚动条</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一：去掉全部的滚动条"><span class="nav-number">1.</span> <span class="nav-text">一：去掉全部的滚动条</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个方法：-iframe-有一个scrolling属性，它有-auto-yes-no-这三个值。"><span class="nav-number">1.1.</span> <span class="nav-text">第一个方法：   iframe 有一个scrolling属性，它有 auto , yes , no 这三个值。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二个方法：我发现除了-scrolling-可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置-body-overflow：hidden-，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。"><span class="nav-number">1.2.</span> <span class="nav-text">第二个方法：我发现除了 scrolling 可以去掉全部的滚动条外，还有另一个方法，在嵌入的页面里设置 body{overflow：hidden}，这样也可以将滚动条去掉，而且这也是当我们只想去掉某一个滚动条所使用的属性。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二：去掉右边的滚动条且保留底下的滚动条"><span class="nav-number">2.</span> <span class="nav-text">二：去掉右边的滚动条且保留底下的滚动条</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三：去掉底下的滚动条且保留右边的滚动条"><span class="nav-number">3.</span> <span class="nav-text">三：去掉底下的滚动条且保留右边的滚动条</span></a></li></ol></div>
             
 
           </div>
