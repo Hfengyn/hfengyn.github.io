@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="奔跑中逆袭">
 <meta property="og:description" content="jade是一款基于haml的html模板引擎，采用Javascript实现，可以方便的在Node.js、Yeoman等框架中使用。文档[官方网站]（https://pugjs.org/api/getting-started.html） 安装在Node中安装Jade的方法如下： npm install jade -g jade -h 在Yeoman中,安装及配置过程较为复杂，具体方法请参看文档（ht">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-31T03:58:37.505Z">
+<meta property="og:updated_time" content="2017-11-30T00:28:27.935Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jade安装使用方法">
 <meta name="twitter:description" content="jade是一款基于haml的html模板引擎，采用Javascript实现，可以方便的在Node.js、Yeoman等框架中使用。文档[官方网站]（https://pugjs.org/api/getting-started.html） 安装在Node中安装Jade的方法如下： npm install jade -g jade -h 在Yeoman中,安装及配置过程较为复杂，具体方法请参看文档（ht">
@@ -387,10 +387,10 @@
 jade -h
 </code></pre><p>在Yeoman中,安装及配置过程较为复杂，具体方法请参看文档（<a href="http://blog.csdn.net/minchina91/article/details/38419093）" target="_blank" rel="external">http://blog.csdn.net/minchina91/article/details/38419093）</a></p>
 <h2 id="命令行使用"><a href="#命令行使用" class="headerlink" title="命令行使用"></a>命令行使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">选项:</div><div class="line"></div><div class="line">-h, --help         输出帮助信息</div><div class="line">-v, --version      输出版本号</div><div class="line">-o, --out &lt;dir&gt;    输出编译后的 HTML 到 &lt;dir&gt;</div><div class="line">-O, --obj &lt;str&gt;    JavaScript 选项</div><div class="line">-p, --path &lt;path&gt;  在处理 stdio 时，查找包含文件时的查找路径</div><div class="line">-P, --pretty       格式化 HTML 输出</div><div class="line">-c, --client       编译浏览器端可用的 runtime.js</div><div class="line">-D, --no-debug     关闭编译的调试选项(函数会更小)</div><div class="line">-w, --watch        监视文件改变自动刷新编译结果</div><div class="line"></div><div class="line">Examples:</div><div class="line"></div><div class="line"># 编译整个目录</div><div class="line">$ jade templates</div><div class="line"></div><div class="line"># 生成 &#123;foo,bar&#125;.html</div><div class="line">$ jade &#123;foo,bar&#125;.jade</div><div class="line"></div><div class="line"># 在标准IO下使用jade </div><div class="line">$ jade &lt; my.jade &gt; my.html</div><div class="line"></div><div class="line"># 在标准IO下使用jade, 同时指定用于查找包含的文件</div><div class="line">$ jade &lt; my.jade -p my.jade &gt; my.html</div><div class="line"></div><div class="line"># 在标准IO下使用jade </div><div class="line">$ echo &quot;h1 Jade!&quot; | jade</div><div class="line"></div><div class="line"># foo, bar 目录渲染到 /tmp</div><div class="line">$ jade foo bar --out /tmp</div></pre></td></tr></table></figure>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h4 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h4><pre><code>// hello world
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h3><pre><code>// hello world
 </code></pre><p>效果为：</p>
 <pre><code>&lt;!-- hello world --&gt;
-</code></pre><h4 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h4><pre><code>body
+</code></pre><h3 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h3><pre><code>body
     //
         p hello world
 </code></pre><p>效果为：</p>
@@ -398,12 +398,12 @@ jade -h
     &lt;!--p hello world 
     --&gt;
 &lt;/body&gt;
-</code></pre><h4 id="不输出注释"><a href="#不输出注释" class="headerlink" title="不输出注释"></a>不输出注释</h4><p>在单行注释上加一个短横线<code>-</code></p>
+</code></pre><h3 id="不输出注释"><a href="#不输出注释" class="headerlink" title="不输出注释"></a>不输出注释</h3><p>在单行注释上加一个短横线<code>-</code></p>
 <pre><code>//- 这段注释不会输出
 p hello world
 </code></pre><p>效果为：</p>
 <pre><code>&lt;p&gt;hello world&lt;/p&gt;
-</code></pre><h4 id="单行注释-1"><a href="#单行注释-1" class="headerlink" title="单行注释"></a>单行注释</h4><pre><code>// hello world
+</code></pre><h3 id="单行注释-1"><a href="#单行注释-1" class="headerlink" title="单行注释"></a>单行注释</h3><pre><code>// hello world
 </code></pre><p>效果为：</p>
 <pre><code>&lt;p&gt;hello world&lt;/p&gt;
 </code></pre><h2 id="静态语法"><a href="#静态语法" class="headerlink" title="静态语法"></a>静态语法</h2><p>在本文中，将会介绍如何用简单的Jade模版语言来生成所需的HTML代码，可以极大减少代码量和提高可读性。</p>
@@ -750,7 +750,7 @@ li!= name
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jade是一款基于haml的html模板引擎，采用Javascript实现，可以方便的在Node-js、Yeoman等框架中使用。"><span class="nav-number">1.</span> <span class="nav-text">jade是一款基于haml的html模板引擎，采用Javascript实现，可以方便的在Node.js、Yeoman等框架中使用。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档"><span class="nav-number">2.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行使用"><span class="nav-number">4.</span> <span class="nav-text">命令行使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">5.</span> <span class="nav-text">注释</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#单行注释"><span class="nav-number">5.0.1.</span> <span class="nav-text">单行注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多行注释"><span class="nav-number">5.0.2.</span> <span class="nav-text">多行注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不输出注释"><span class="nav-number">5.0.3.</span> <span class="nav-text">不输出注释</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#单行注释-1"><span class="nav-number">5.0.4.</span> <span class="nav-text">单行注释</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态语法"><span class="nav-number">6.</span> <span class="nav-text">静态语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态特性"><span class="nav-number">7.</span> <span class="nav-text">动态特性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jade是一款基于haml的html模板引擎，采用Javascript实现，可以方便的在Node-js、Yeoman等框架中使用。"><span class="nav-number">1.</span> <span class="nav-text">jade是一款基于haml的html模板引擎，采用Javascript实现，可以方便的在Node.js、Yeoman等框架中使用。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档"><span class="nav-number">2.</span> <span class="nav-text">文档</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">3.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令行使用"><span class="nav-number">4.</span> <span class="nav-text">命令行使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">5.</span> <span class="nav-text">注释</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单行注释"><span class="nav-number">5.1.</span> <span class="nav-text">单行注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多行注释"><span class="nav-number">5.2.</span> <span class="nav-text">多行注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不输出注释"><span class="nav-number">5.3.</span> <span class="nav-text">不输出注释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单行注释-1"><span class="nav-number">5.4.</span> <span class="nav-text">单行注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态语法"><span class="nav-number">6.</span> <span class="nav-text">静态语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态特性"><span class="nav-number">7.</span> <span class="nav-text">动态特性</span></a></li></ol></div>
             
 
           </div>

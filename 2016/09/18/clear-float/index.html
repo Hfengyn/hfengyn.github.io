@@ -112,7 +112,7 @@
 <meta property="og:image" content="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/2DG7amjbSZKy6m9Nx9naaYUSSMVWXrX3Jb7fUTrimak!/b/dAoBAAAAAAAA&bo=yQGuAAAAAAADAEM!&rf=viewer_4">
 <meta property="og:image" content="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/slfhSm8krjL.Y0hCicKvy6zu6UR2ni1LVVSdqtccHhI!/b/dAoBAAAAAAAA&bo=1QKpAQAAAAADAFo!&rf=viewer_4">
 <meta property="og:image" content="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/WJ*ov2uehZJuBbkxVeevUcqFxyrIIoBhwxMxktfs7hM!/b/dAoBAAAAAAAA&bo=WQJOAAAAAAADADA!&rf=viewer_4">
-<meta property="og:updated_time" content="2016-11-21T06:51:34.000Z">
+<meta property="og:updated_time" content="2017-11-30T00:40:56.345Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS中的浮动和清除浮动">
 <meta name="twitter:description" content="从业三年，项目无数，现在回过头来，想要把一些重要的知识用白话整理出来：这个东西是什么？怎样才是最佳实践？希望对自己知识体系有梳理作用， 也希望对大家有些许帮助。 前端技术栈更新太快，眼花缭乱，大家一个劲揽过来学习的时候，别忘了回头看看那些已经掌握的基础知识。 第一篇就整理整理CSS中很常见的浮动以及清除浮动的一些方式吧。 浮动到底是什么？浮动核心就一句话：浮动元素会脱离文档流并向左/向右浮动，直到">
@@ -401,15 +401,15 @@
 <p>文字环绕效果</p>
 <p>但是早期的前端开发者发现：浮动的元素可以设置宽高并且可以内联排列，是介于<code>inline</code>和<code>block</code>之间的一个神奇的存在，在<code>inline-block</code>出来之前，浮动大行其道。直到<code>inline-block</code>出来后，浮动也有它自己独特的使用场景。</p>
 <h2 id="浮动有哪些特征？"><a href="#浮动有哪些特征？" class="headerlink" title="浮动有哪些特征？"></a>浮动有哪些特征？</h2><p>浮动的特征就体现在前文的那句话中，别忘了默念三次！此外，浮动带来的负效果也算是它的特征之一。</p>
-<h4 id="浮动会脱离文档"><a href="#浮动会脱离文档" class="headerlink" title="浮动会脱离文档"></a>浮动会脱离文档</h4><p>脱离文档，也就是说浮动不会影响普通元素的布局</p>
+<h3 id="浮动会脱离文档"><a href="#浮动会脱离文档" class="headerlink" title="浮动会脱离文档"></a>浮动会脱离文档</h3><p>脱离文档，也就是说浮动不会影响普通元素的布局</p>
 <p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/bto1l9KqQHwGYTjIMwJxKmpVyiLc02F6NtLMIKdmndE!/b/dI0BAAAAAAAA&amp;bo=RQMGAQAAAAADB2M!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>浮动会脱离文档流</p>
 <p>从上图可以看出，默认三个设置了宽高的<code>block</code>元素，本来会格子独占一行；如果框1设置了向左/向右浮动，他会忽略框2和框3，直到碰到父元素；<strong>同时也存在盖住普通元素的风险</strong>。</p>
-<h4 id="浮动可以内联排列"><a href="#浮动可以内联排列" class="headerlink" title="浮动可以内联排列"></a>浮动可以内联排列</h4><p>浮动会向左/向右浮动，直到碰到另一个浮动元素为止，这是浮动可以内联排列的特征。也就是说，浮动可以设置宽高，并且能够一行多个，是介于<code>block</code>和<code>inline</code>之间的存在。</p>
+<h3 id="浮动可以内联排列"><a href="#浮动可以内联排列" class="headerlink" title="浮动可以内联排列"></a>浮动可以内联排列</h3><p>浮动会向左/向右浮动，直到碰到另一个浮动元素为止，这是浮动可以内联排列的特征。也就是说，浮动可以设置宽高，并且能够一行多个，是介于<code>block</code>和<code>inline</code>之间的存在。</p>
 <p><img src="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/CwPYVceMglmszpuUgsaFiOVfe1CqudKrW.ZaFbdLz3c!/b/dHcBAAAAAAAA&amp;bo=RAMSAQAAAAADAHE!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>浮动可以内联排列</p>
 <p>从上图可以看出，对多个元素设置浮动，可以实现类似<code>inline-block</code>的效果；但是如果每个元素的高度不一致，<strong>会出现“卡住”的情况</strong>。</p>
-<h4 id="浮动会导致父元素高度坍塌"><a href="#浮动会导致父元素高度坍塌" class="headerlink" title="浮动会导致父元素高度坍塌"></a>浮动会导致父元素高度坍塌</h4><p>浮动会脱离文档流，这个问题对整个页面布局有很大的影响。</p>
+<h3 id="浮动会导致父元素高度坍塌"><a href="#浮动会导致父元素高度坍塌" class="headerlink" title="浮动会导致父元素高度坍塌"></a>浮动会导致父元素高度坍塌</h3><p>浮动会脱离文档流，这个问题对整个页面布局有很大的影响。</p>
 <pre><code>// css
 .box-wrapper {
     border: 5px solid red;
@@ -444,7 +444,7 @@
 </code></pre><p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/LH7ACtZULPbVlwvRuC2SatTyiGQcVpvDNIydDAlLlXs!/b/dAkBAAAAAAAA&amp;bo=ZQK4AAAAAAADAPo!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>clear清除浮动</p>
 <p>高度坍塌的问题解决了，至此，好像浮动我们可以随便玩了，真棒！</p>
-<h4 id="不要在浮动元素上清除浮动"><a href="#不要在浮动元素上清除浮动" class="headerlink" title="不要在浮动元素上清除浮动"></a>不要在浮动元素上清除浮动</h4><p>但是有人问到，如果我们给第三个元素加上clear:both，结果会怎样？</p>
+<h3 id="不要在浮动元素上清除浮动"><a href="#不要在浮动元素上清除浮动" class="headerlink" title="不要在浮动元素上清除浮动"></a>不要在浮动元素上清除浮动</h3><p>但是有人问到，如果我们给第三个元素加上clear:both，结果会怎样？</p>
 <pre><code>&lt;div class=&quot;box-wrapper&quot;&gt;
     &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
     &lt;div class=&quot;box&quot;&gt;&lt;/div&gt;
@@ -453,20 +453,20 @@
 </code></pre><p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/Uzy*wh8QsrhIrvTTH1UCc9Y3elrPVMj0Xdu3ebNNvvw!/b/dAoBAAAAAAAA&amp;bo=ZgIoAQAAAAADAGg!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>不要在浮动元素上清除浮动</p>
 <p>诶？给第三个元素加上clear:both之后，第三个元素的左右都没有挨着浮动元素，但是为什么高度还是坍塌了呢？机智的你可能发现了，由于第三个元素是浮动元素，脱离了文档流，就算给第三个元素上下加了清除空间，也是没有任何意义的。</p>
-<h4 id="clear清除浮动最佳实践"><a href="#clear清除浮动最佳实践" class="headerlink" title="clear清除浮动最佳实践"></a>clear清除浮动最佳实践</h4><p>那么clear清除浮动的最佳实践是什么呢？请看如下代码：</p>
+<h3 id="clear清除浮动最佳实践"><a href="#clear清除浮动最佳实践" class="headerlink" title="clear清除浮动最佳实践"></a>clear清除浮动最佳实践</h3><p>那么clear清除浮动的最佳实践是什么呢？请看如下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">// 现代浏览器clearfix方案，不支持IE6/7</div><div class="line">.clearfix:after &#123;</div><div class="line">    display: table;</div><div class="line">    content: &quot; &quot;;</div><div class="line">    clear: both;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 全浏览器通用的clearfix方案</div><div class="line">// 引入了zoom以支持IE6/7</div><div class="line">.clearfix:after &#123;</div><div class="line">    display: table;</div><div class="line">    content: &quot; &quot;;</div><div class="line">    clear: both;</div><div class="line">&#125;</div><div class="line">.clearfix&#123;</div><div class="line">    *zoom: 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 全浏览器通用的clearfix方案【推荐】</div><div class="line">// 引入了zoom以支持IE6/7</div><div class="line">// 同时加入:before以解决现代浏览器上边距折叠的问题</div><div class="line">.clearfix:before,</div><div class="line">.clearfix:after &#123;</div><div class="line">    display: table;</div><div class="line">    content: &quot; &quot;;</div><div class="line">&#125;</div><div class="line">.clearfix:after &#123;</div><div class="line">    clear: both;</div><div class="line">&#125;</div><div class="line">.clearfix&#123;</div><div class="line">    *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/jDT92O87AZeofKLN9yNAqR0iRypx7Hg4I5e8vai7MhA!/b/dNwAAAAAAAAA&amp;bo=HwIjAQAAAAADABo!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>clearfix清除浮动</p>
 <p>一句话，强烈推荐clearfix的方式清除浮动！</p>
 <h2 id="BFC清除浮动"><a href="#BFC清除浮动" class="headerlink" title="BFC清除浮动"></a>BFC清除浮动</h2><p>BFC全称是块状格式化上下文，它是按照块级盒子布局的。我们了解他的特征、触发方式、常见使用场景这些就够了。</p>
-<h4 id="BFC的主要特征"><a href="#BFC的主要特征" class="headerlink" title="BFC的主要特征"></a>BFC的主要特征</h4><ol>
+<h3 id="BFC的主要特征"><a href="#BFC的主要特征" class="headerlink" title="BFC的主要特征"></a>BFC的主要特征</h3><ol>
 <li><p>BFC容器是一个隔离的容器，和其他元素互不干扰；所以我们可以用触发两个元素的BFC来解决垂直边距折叠问题。</p>
 </li>
 <li><p>BFC可以包含浮动；通常用来解决浮动父元素高度坍塌的问题。</p>
 </li>
 </ol>
 <p>其中，BFC清除浮动就是用的“包含浮动”这条特性。<br>那么，怎样才能触发BFC呢？</p>
-<h4 id="BFC的触发方式"><a href="#BFC的触发方式" class="headerlink" title="BFC的触发方式"></a>BFC的触发方式</h4><p>我们可以给父元素添加以下属性来触发BFC：</p>
+<h3 id="BFC的触发方式"><a href="#BFC的触发方式" class="headerlink" title="BFC的触发方式"></a>BFC的触发方式</h3><p>我们可以给父元素添加以下属性来触发BFC：</p>
 <ol>
 <li><code>float</code>为<code>left</code>|<code>right</code></li>
 <li><code>overflow</code>为<code>hidden</code>|<code>auto</code>|<code>scorll</code></li>
@@ -477,14 +477,14 @@
 <pre><code>.box-wrapper{
     overflow: hidden;
 }
-</code></pre><h2 id="浮动的适用场景有哪些？"><a href="#浮动的适用场景有哪些？" class="headerlink" title="浮动的适用场景有哪些？"></a>浮动的适用场景有哪些？</h2><h4 id="文字环绕效果"><a href="#文字环绕效果" class="headerlink" title="文字环绕效果"></a>文字环绕效果</h4><p>这个不用说了，浮动本来就是为文字环绕效果而生，这是最基本的</p>
+</code></pre><h2 id="浮动的适用场景有哪些？"><a href="#浮动的适用场景有哪些？" class="headerlink" title="浮动的适用场景有哪些？"></a>浮动的适用场景有哪些？</h2><h3 id="文字环绕效果"><a href="#文字环绕效果" class="headerlink" title="文字环绕效果"></a>文字环绕效果</h3><p>这个不用说了，浮动本来就是为文字环绕效果而生，这是最基本的</p>
 <p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/2DG7amjbSZKy6m9Nx9naaYUSSMVWXrX3Jb7fUTrimak!/b/dAoBAAAAAAAA&amp;bo=yQGuAAAAAAADAEM!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>文字环绕效果</p>
-<h4 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h4><p>浮动可以实现常规的多列布局，但个人推荐使用inline-block。</p>
+<h3 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h3><p>浮动可以实现常规的多列布局，但个人推荐使用inline-block。</p>
 <p>浮动更适合实现自适应多列布局，比如左侧固定宽度，右侧根据父元素宽度自适应。</p>
 <p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/slfhSm8krjL.Y0hCicKvy6zu6UR2ni1LVVSdqtccHhI!/b/dAoBAAAAAAAA&amp;bo=1QKpAQAAAAADAFo!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>页面布局</p>
-<h4 id="多个元素内联排列"><a href="#多个元素内联排列" class="headerlink" title="多个元素内联排列"></a>多个元素内联排列</h4><p>如果前文提到的，浮动可以实现类似inline-block的排列，比如菜单多个元素内联排列。但个人推荐使用inline-block。</p>
+<h3 id="多个元素内联排列"><a href="#多个元素内联排列" class="headerlink" title="多个元素内联排列"></a>多个元素内联排列</h3><p>如果前文提到的，浮动可以实现类似inline-block的排列，比如菜单多个元素内联排列。但个人推荐使用inline-block。</p>
 <p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/WJ*ov2uehZJuBbkxVeevUcqFxyrIIoBhwxMxktfs7hM!/b/dAoBAAAAAAAA&amp;bo=WQJOAAAAAAADADA!&amp;rf=viewer_4" alt="Mou icon"></p>
 <p>多个元素内联排列</p>
 <h2 id="又来点总结？"><a href="#又来点总结？" class="headerlink" title="又来点总结？"></a>又来点总结？</h2><p>本来只是想简单说说浮动的背景、浮动的问题，浮动的解决方案，但真整理起来的时候，又发现很多知识点需要扩展，很多东西需要掰扯，一文难以言尽，所以只挑一些我觉得比较主流比较重要的知识写出来，如果有兴趣可以自行展开。</p>
@@ -778,7 +778,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动到底是什么？"><span class="nav-number">1.</span> <span class="nav-text">浮动到底是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动有哪些特征？"><span class="nav-number">2.</span> <span class="nav-text">浮动有哪些特征？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#浮动会脱离文档"><span class="nav-number">2.0.1.</span> <span class="nav-text">浮动会脱离文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮动可以内联排列"><span class="nav-number">2.0.2.</span> <span class="nav-text">浮动可以内联排列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浮动会导致父元素高度坍塌"><span class="nav-number">2.0.3.</span> <span class="nav-text">浮动会导致父元素高度坍塌</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clear如何清除浮动？"><span class="nav-number">3.</span> <span class="nav-text">clear如何清除浮动？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#不要在浮动元素上清除浮动"><span class="nav-number">3.0.1.</span> <span class="nav-text">不要在浮动元素上清除浮动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#clear清除浮动最佳实践"><span class="nav-number">3.0.2.</span> <span class="nav-text">clear清除浮动最佳实践</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC清除浮动"><span class="nav-number">4.</span> <span class="nav-text">BFC清除浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#BFC的主要特征"><span class="nav-number">4.0.1.</span> <span class="nav-text">BFC的主要特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BFC的触发方式"><span class="nav-number">4.0.2.</span> <span class="nav-text">BFC的触发方式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动的适用场景有哪些？"><span class="nav-number">5.</span> <span class="nav-text">浮动的适用场景有哪些？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文字环绕效果"><span class="nav-number">5.0.1.</span> <span class="nav-text">文字环绕效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面布局"><span class="nav-number">5.0.2.</span> <span class="nav-text">页面布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多个元素内联排列"><span class="nav-number">5.0.3.</span> <span class="nav-text">多个元素内联排列</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#又来点总结？"><span class="nav-number">6.</span> <span class="nav-text">又来点总结？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动到底是什么？"><span class="nav-number">1.</span> <span class="nav-text">浮动到底是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动有哪些特征？"><span class="nav-number">2.</span> <span class="nav-text">浮动有哪些特征？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动会脱离文档"><span class="nav-number">2.1.</span> <span class="nav-text">浮动会脱离文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动可以内联排列"><span class="nav-number">2.2.</span> <span class="nav-text">浮动可以内联排列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浮动会导致父元素高度坍塌"><span class="nav-number">2.3.</span> <span class="nav-text">浮动会导致父元素高度坍塌</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clear如何清除浮动？"><span class="nav-number">3.</span> <span class="nav-text">clear如何清除浮动？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不要在浮动元素上清除浮动"><span class="nav-number">3.1.</span> <span class="nav-text">不要在浮动元素上清除浮动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#clear清除浮动最佳实践"><span class="nav-number">3.2.</span> <span class="nav-text">clear清除浮动最佳实践</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC清除浮动"><span class="nav-number">4.</span> <span class="nav-text">BFC清除浮动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC的主要特征"><span class="nav-number">4.1.</span> <span class="nav-text">BFC的主要特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC的触发方式"><span class="nav-number">4.2.</span> <span class="nav-text">BFC的触发方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浮动的适用场景有哪些？"><span class="nav-number">5.</span> <span class="nav-text">浮动的适用场景有哪些？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文字环绕效果"><span class="nav-number">5.1.</span> <span class="nav-text">文字环绕效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面布局"><span class="nav-number">5.2.</span> <span class="nav-text">页面布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多个元素内联排列"><span class="nav-number">5.3.</span> <span class="nav-text">多个元素内联排列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#又来点总结？"><span class="nav-number">6.</span> <span class="nav-text">又来点总结？</span></a></li></ol></div>
             
 
           </div>

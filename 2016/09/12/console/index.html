@@ -106,7 +106,7 @@
 <meta property="og:image" content="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/KcWfAZ4kPlE2YHA2UED9mjXqLIRU3sWJy4nGf4BdEZ4!/b/dI0BAAAAAAAA&bo=IANkACADZAAFACM!&rf=viewer_4">
 <meta property="og:image" content="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/UKZWlspMCt4IB3e4Hd5.r0FLefMe6RWGZcDrCBc7KQo!/b/dAkBAAAAAAAA&bo=IAOoACADqAAFACM!&rf=viewer_4">
 <meta property="og:image" content="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/w1aRZFf0cPxgp7u2FEGKX2oHnuk.rW*764tJDKpOQs4!/b/dAkBAAAAAAAA&bo=IAOUACADlAAFACM!&rf=viewer_4">
-<meta property="og:updated_time" content="2016-11-25T02:00:16.000Z">
+<meta property="og:updated_time" content="2017-11-30T00:36:38.987Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你所不知道的 Console">
 <meta name="twitter:description" content="1.凡人视角 打印字符串代码： console.log(&amp;quot;I am a 凡人&amp;quot;); 打印提示消息代码： console.info(&amp;quot;Yes, you arm a 凡人&amp;quot;); 打印警告消息代码： console.warn(&amp;quot;凡人你居然敢窥视我&amp;quot;); 打印错误消息代码： console.error(&amp;quot;天兵天将，把这个凡人给我打入地狱">
@@ -386,7 +386,7 @@
       
 
       
-        <h1 id="1-凡人视角"><a href="#1-凡人视角" class="headerlink" title="1.凡人视角"></a>1.凡人视角</h1><hr>
+        <h2 id="1-凡人视角"><a href="#1-凡人视角" class="headerlink" title="1.凡人视角"></a>1.凡人视角</h2><hr>
 <h3 id="打印字符串"><a href="#打印字符串" class="headerlink" title="打印字符串"></a>打印字符串</h3><p>代码：</p>
 <pre><code>console.log(&quot;I am a 凡人&quot;);
 </code></pre><h3 id="打印提示消息"><a href="#打印提示消息" class="headerlink" title="打印提示消息"></a>打印提示消息</h3><p>代码：</p>
@@ -396,7 +396,7 @@
 </code></pre><h3 id="打印错误消息"><a href="#打印错误消息" class="headerlink" title="打印错误消息"></a>打印错误消息</h3><p>代码：</p>
 <pre><code>console.error(&quot;天兵天将，把这个凡人给我打入地狱&quot;);
 </code></pre><h3 id="打印调试信息"><a href="#打印调试信息" class="headerlink" title="打印调试信息"></a>打印调试信息</h3><pre><code>console.debug(&quot;我就是传说中的debug&quot;);
-</code></pre><h1 id="2-上帝视角"><a href="#2-上帝视角" class="headerlink" title="2.上帝视角"></a>2.上帝视角</h1><hr>
+</code></pre><h2 id="2-上帝视角"><a href="#2-上帝视角" class="headerlink" title="2.上帝视角"></a>2.上帝视角</h2><hr>
 <h3 id="查看所有方法"><a href="#查看所有方法" class="headerlink" title="查看所有方法"></a>查看所有方法</h3><p><code>console</code>除了上面的几个方法还有什么方法呢？<code>log</code>除了能打印字符串外，还能打印出对象，我们可以利用<code>console.log</code>打印自己。</p>
 <p>代码：</p>
 <pre><code>console.log(console);
@@ -486,7 +486,7 @@ console.assert(1 == 0);
 console.assert(!(1 == 0));
 </code></pre><h3 id="统计次数"><a href="#统计次数" class="headerlink" title="统计次数"></a>统计次数</h3><p>有时候我们需要统计一个函数或者被调用了几次，我们通常会增加一个变量<code>count</code>来记录，然后在控制台中查看。这样相当的麻烦，我们可以使用<code>console.count</code>函数来帮忙我们记录次数，并输出。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function hi(name) &#123;</div><div class="line">    console.count(name);</div><div class="line">    return &quot;hi &quot; + name;</div><div class="line">&#125;</div><div class="line"></div><div class="line">for(var i = 0; i &lt; 10; i++) &#123;</div><div class="line">    if(i &lt; 4) &#123;</div><div class="line">        hi(&quot;person&quot;);</div><div class="line">    &#125; else &#123;</div><div class="line">        hi(&quot;god&quot;);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><hr>
 <p><code>console</code>中有很多对我们调试代码有帮助的函数，我们可以在开发环境中配合<code>console</code>来调试代码，使得我们测试更加便利。</p>
 <hr>
 <p>来自：<a href="https://segmentfault.com/a/1190000006721606" target="_blank" rel="external">https://segmentfault.com/a/1190000006721606</a></p>
@@ -766,7 +766,7 @@ console.assert(!(1 == 0));
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-凡人视角"><span class="nav-number">1.</span> <span class="nav-text">1.凡人视角</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打印字符串"><span class="nav-number">1.0.1.</span> <span class="nav-text">打印字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印提示消息"><span class="nav-number">1.0.2.</span> <span class="nav-text">打印提示消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印警告消息"><span class="nav-number">1.0.3.</span> <span class="nav-text">打印警告消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印错误消息"><span class="nav-number">1.0.4.</span> <span class="nav-text">打印错误消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印调试信息"><span class="nav-number">1.0.5.</span> <span class="nav-text">打印调试信息</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-上帝视角"><span class="nav-number">2.</span> <span class="nav-text">2.上帝视角</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看所有方法"><span class="nav-number">2.0.1.</span> <span class="nav-text">查看所有方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清理控制台"><span class="nav-number">2.0.2.</span> <span class="nav-text">清理控制台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组"><span class="nav-number">2.0.3.</span> <span class="nav-text">分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看对象信息"><span class="nav-number">2.0.4.</span> <span class="nav-text">查看对象信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能测试"><span class="nav-number">2.0.5.</span> <span class="nav-text">性能测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断真假"><span class="nav-number">2.0.6.</span> <span class="nav-text">判断真假</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#统计次数"><span class="nav-number">2.0.7.</span> <span class="nav-text">统计次数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-凡人视角"><span class="nav-number">1.</span> <span class="nav-text">1.凡人视角</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打印字符串"><span class="nav-number">1.1.</span> <span class="nav-text">打印字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印提示消息"><span class="nav-number">1.2.</span> <span class="nav-text">打印提示消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印警告消息"><span class="nav-number">1.3.</span> <span class="nav-text">打印警告消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印错误消息"><span class="nav-number">1.4.</span> <span class="nav-text">打印错误消息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印调试信息"><span class="nav-number">1.5.</span> <span class="nav-text">打印调试信息</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-上帝视角"><span class="nav-number">2.</span> <span class="nav-text">2.上帝视角</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看所有方法"><span class="nav-number">2.1.</span> <span class="nav-text">查看所有方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清理控制台"><span class="nav-number">2.2.</span> <span class="nav-text">清理控制台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组"><span class="nav-number">2.3.</span> <span class="nav-text">分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看对象信息"><span class="nav-number">2.4.</span> <span class="nav-text">查看对象信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能测试"><span class="nav-number">2.5.</span> <span class="nav-text">性能测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断真假"><span class="nav-number">2.6.</span> <span class="nav-text">判断真假</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#统计次数"><span class="nav-number">2.7.</span> <span class="nav-text">统计次数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

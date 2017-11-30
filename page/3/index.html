@@ -384,9 +384,9 @@
           
           用js做时间校正，获取本机时间，是存在bug的。
 使用js也可获取到服务器时间，原理是使用 ajax请求，返回的头部信息就含有服务器端的时间信息，获取到就可以了。以下：
-1、依赖jQuery代码：
+依赖jQuery代码：
 function getServerDate(){
-    return new Date($.ajax({async: false}).getResponseHeader(&quot;Date&quo
+    return new Date($.ajax({async: false}).getResponseHeader(&quot;Date&quot;
           ...
           <!--noindex-->
           <div class="post-button text-center">

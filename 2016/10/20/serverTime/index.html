@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="用js做时间校正，获取本机时间，是存在bug的。 使用js也可获取到服务器时间，原理是使用 ajax请求，返回的头部信息就含有服务器端的时间信息，获取到就可以了。以下： 1、依赖jQuery代码： function getServerDate(){     return new Date($.ajax({async: false}).getResponseHeader(&amp;quot;Date&amp;quo">
+<meta name="description" content="用js做时间校正，获取本机时间，是存在bug的。 使用js也可获取到服务器时间，原理是使用 ajax请求，返回的头部信息就含有服务器端的时间信息，获取到就可以了。以下： 依赖jQuery代码： function getServerDate(){     return new Date($.ajax({async: false}).getResponseHeader(&amp;quot;Date&amp;quot;">
 <meta name="keywords" content="javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js如何获取服务器端时间？">
 <meta property="og:url" content="http://yoursite.com/2016/10/20/serverTime/index.html">
 <meta property="og:site_name" content="奔跑中逆袭">
-<meta property="og:description" content="用js做时间校正，获取本机时间，是存在bug的。 使用js也可获取到服务器时间，原理是使用 ajax请求，返回的头部信息就含有服务器端的时间信息，获取到就可以了。以下： 1、依赖jQuery代码： function getServerDate(){     return new Date($.ajax({async: false}).getResponseHeader(&amp;quot;Date&amp;quo">
+<meta property="og:description" content="用js做时间校正，获取本机时间，是存在bug的。 使用js也可获取到服务器时间，原理是使用 ajax请求，返回的头部信息就含有服务器端的时间信息，获取到就可以了。以下： 依赖jQuery代码： function getServerDate(){     return new Date($.ajax({async: false}).getResponseHeader(&amp;quot;Date&amp;quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2016-11-29T12:05:40.000Z">
+<meta property="og:updated_time" content="2017-11-30T00:56:46.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js如何获取服务器端时间？">
-<meta name="twitter:description" content="用js做时间校正，获取本机时间，是存在bug的。 使用js也可获取到服务器时间，原理是使用 ajax请求，返回的头部信息就含有服务器端的时间信息，获取到就可以了。以下： 1、依赖jQuery代码： function getServerDate(){     return new Date($.ajax({async: false}).getResponseHeader(&amp;quot;Date&amp;quo">
+<meta name="twitter:description" content="用js做时间校正，获取本机时间，是存在bug的。 使用js也可获取到服务器时间，原理是使用 ajax请求，返回的头部信息就含有服务器端的时间信息，获取到就可以了。以下： 依赖jQuery代码： function getServerDate(){     return new Date($.ajax({async: false}).getResponseHeader(&amp;quot;Date&amp;quot;">
 
 
 
@@ -383,14 +383,14 @@
       
         <p>用js做时间校正，获取本机时间，是存在bug的。</p>
 <p>使用js也可获取到服务器时间，原理是使用 ajax请求，返回的头部信息就含有服务器端的时间信息，获取到就可以了。以下：</p>
-<h4 id="1、依赖jQuery"><a href="#1、依赖jQuery" class="headerlink" title="1、依赖jQuery"></a>1、依赖jQuery</h4><p>代码：</p>
+<h2 id="依赖jQuery"><a href="#依赖jQuery" class="headerlink" title="依赖jQuery"></a>依赖jQuery</h2><p>代码：</p>
 <pre><code>function getServerDate(){
     return new Date($.ajax({async: false}).getResponseHeader(&quot;Date&quot;));
 }
 </code></pre><p>以上函数返回的就是一个Date对象，注意在使用ajax时必须同步，要不然无法返回时间日期。</p>
 <p>无需填写请求链接；</p>
 <p>如果服务器时间和本地时间有时差，需要做校正。</p>
-<h4 id="2、原生"><a href="#2、原生" class="headerlink" title="2、原生"></a>2、原生</h4><p>代码：</p>
+<h2 id="原生"><a href="#原生" class="headerlink" title="原生"></a>原生</h2><p>代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function getServerDate()&#123;</div><div class="line">    var xhr = null;</div><div class="line">    if(window.XMLHttpRequest)&#123;</div><div class="line">      xhr = new window.XMLHttpRequest();</div><div class="line">    &#125;else&#123; // ie</div><div class="line">      xhr = new ActiveObject(&quot;Microsoft&quot;)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    xhr.open(&quot;GET&quot;,&quot;/&quot;,false)//false不可变</div><div class="line">    xhr.send(null);</div><div class="line">    var date = xhr.getResponseHeader(&quot;Date&quot;);</div><div class="line">    return new Date(date);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>同样返回的是一个Date对象，xhr.open()必须使用同步;</p>
 <p>无需填写请求链接;open，send，和getResponseHeader 必须按序编写。</p>
@@ -687,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1、依赖jQuery"><span class="nav-number">1.</span> <span class="nav-text">1、依赖jQuery</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2、原生"><span class="nav-number">2.</span> <span class="nav-text">2、原生</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖jQuery"><span class="nav-number">1.</span> <span class="nav-text">依赖jQuery</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原生"><span class="nav-number">2.</span> <span class="nav-text">原生</span></a></li></ol></div>
             
 
           </div>
