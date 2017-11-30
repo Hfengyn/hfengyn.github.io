@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="安全,HTTP,HTTPS," />
+  <meta name="keywords" content="HTTP,HTTPS,安全," />
 
 
 
@@ -95,7 +95,7 @@
 
 
 <meta name="description" content="我们知道，HTTP 协议都是明文传输内容，在早期只展示静态内容时没有问题。伴随着互联网的快速发展，人们对于网络传输安全性的要求也越来越高，HTTPS 协议因此出现。如上图所示，在 HTTPS 加密中真正起作用的其实是 SSL/TLS 协议。SSL/TLS 协议作用在 HTTP 协议之下，对于上层应用来说，原来的发送接收数据流程不变，这就很好地兼容了老的 HTTP 协议，这也是软件开发中分层实现的">
-<meta name="keywords" content="安全,HTTP,HTTPS">
+<meta name="keywords" content="HTTP,HTTPS,安全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SSL&#x2F;TLS 握手过程详解">
 <meta property="og:url" content="http://yoursite.com/2016/12/02/SSL-TLS/index.html">
@@ -349,17 +349,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2016/12/02/SSL-TLS/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2016/12/02/SSL-TLS/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -482,11 +471,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/安全/" rel="tag"># 安全</a>
-          
             <a href="/tags/HTTP/" rel="tag"># HTTP</a>
           
             <a href="/tags/HTTPS/" rel="tag"># HTTPS</a>
+          
+            <a href="/tags/安全/" rel="tag"># 安全</a>
           
         </div>
       
@@ -547,12 +536,7 @@
           
   <div class="comments" id="comments">
     
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjA3MC84NjM0"></div>
     
   </div>
 
@@ -887,26 +871,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://babyxh.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2016/12/02/SSL-TLS/';
-          this.page.identifier = '2016/12/02/SSL-TLS/';
-          this.page.title = 'SSL/TLS 握手过程详解';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://babyxh.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -919,6 +883,21 @@
   
 
 
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
 
 
 
