@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="CSS,HTML,grid," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="CSS Grid(网格) 模块是创建网站布局一个非常棒的工具。它能使你快速地进行布局尝试，比你尝试过的任何其他布局系统都快。 在这篇文章中，我会教你如何使用CSS Grid进行快速布局。 我的要创建的网格我们将模仿一个经典网站布局，从非常基本的Grid(网格)开始：  首先，我将解释我们需要的HTML和CSS，我已经将其分解为四个部分。 一旦你了解了这些，我们将继续进行布局试验。 如果您对CSS">
+<meta name="keywords" content="CSS,HTML,grid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何使用 CSS Grid 快速而又灵活的布局">
+<meta property="og:url" content="http://yoursite.com/2017/12/06/css-grid/index.html">
+<meta property="og:site_name" content="奔跑中逆袭">
+<meta property="og:description" content="CSS Grid(网格) 模块是创建网站布局一个非常棒的工具。它能使你快速地进行布局尝试，比你尝试过的任何其他布局系统都快。 在这篇文章中，我会教你如何使用CSS Grid进行快速布局。 我的要创建的网格我们将模仿一个经典网站布局，从非常基本的Grid(网格)开始：  首先，我将解释我们需要的HTML和CSS，我已经将其分解为四个部分。 一旦你了解了这些，我们将继续进行布局试验。 如果您对CSS">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://m.qpic.cn/psb?/V11KiFfB3TEN6V/n30aR7KM2cHzuA027pZSZLMliX65aANTWWsXSpoNWdw!/b/dPIAAAAAAAAA&bo=twPrAbcD6wEDCSw!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/arFlrvpcXTk5ZedJfSlIqWxp5QBobYhvBYkshQXW5WI!/b/dPMAAAAAAAAA&bo=IAMNASADDQECy.8!&rf=viewer_4">
+<meta property="og:image" content="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/DJDaNtepUu6ra4CY48f9fZnFHMlB.cZD4hJ6Ncx43fQ!/b/dPIAAAAAAAAA&bo=AAXEAgAFxAIDACU!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/GVoH2KkOufl*IgdSNXi2uCO.YkQ0XXKJdwQLZHlnDyc!/b/dPMAAAAAAAAA&bo=HwPpAR8D6QEDACU!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/ntOK2.5SiBKEXZ.idytwCs9QaIxkmBkam1G3hWKMbTM!/b/dD4BAAAAAAAA&bo=IAP7ASAD.wEDACU!&rf=viewer_4">
+<meta property="og:image" content="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/sbFI4.k7GqFMem4thZHQ9IZzUWdweJTF2Ur0Z5NuF5E!/b/dD4BAAAAAAAA&bo=IAN0ASADdAECWHw!&rf=viewer_4">
+<meta property="og:updated_time" content="2017-12-06T06:02:54.100Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何使用 CSS Grid 快速而又灵活的布局">
+<meta name="twitter:description" content="CSS Grid(网格) 模块是创建网站布局一个非常棒的工具。它能使你快速地进行布局尝试，比你尝试过的任何其他布局系统都快。 在这篇文章中，我会教你如何使用CSS Grid进行快速布局。 我的要创建的网格我们将模仿一个经典网站布局，从非常基本的Grid(网格)开始：  首先，我将解释我们需要的HTML和CSS，我已经将其分解为四个部分。 一旦你了解了这些，我们将继续进行布局试验。 如果您对CSS">
+<meta name="twitter:image" content="http://m.qpic.cn/psb?/V11KiFfB3TEN6V/n30aR7KM2cHzuA027pZSZLMliX65aANTWWsXSpoNWdw!/b/dPIAAAAAAAAA&bo=twPrAbcD6wEDCSw!&rf=viewer_4">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/06/css-grid/"/>
+
+
+
+
+
+  <title>如何使用 CSS Grid 快速而又灵活的布局 | 奔跑中逆袭</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">奔跑中逆袭</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">That's a bug</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/06/css-grid/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="韓锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="奔跑中逆袭">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">如何使用 CSS Grid 快速而又灵活的布局</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-06T13:58:02+08:00">
+                2017-12-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/12/06/css-grid/" class="leancloud_visitors" data-flag-title="如何使用 CSS Grid 快速而又灵活的布局">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://m.qpic.cn/psb?/V11KiFfB3TEN6V/n30aR7KM2cHzuA027pZSZLMliX65aANTWWsXSpoNWdw!/b/dPIAAAAAAAAA&amp;bo=twPrAbcD6wEDCSw!&amp;rf=viewer_4" alt="Mou icon"></p>
+<p>CSS Grid(网格) 模块是创建网站布局一个非常棒的工具。它能使你快速地进行布局尝试，比你尝试过的任何其他布局系统都快。</p>
+<p>在这篇文章中，我会教你如何使用<code>CSS Grid</code>进行快速布局。</p>
+<h2 id="我的要创建的网格"><a href="#我的要创建的网格" class="headerlink" title="我的要创建的网格"></a>我的要创建的网格</h2><p>我们将模仿一个经典网站布局，从非常基本的<code>Grid(网格)</code>开始：</p>
+<p><img src="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/arFlrvpcXTk5ZedJfSlIqWxp5QBobYhvBYkshQXW5WI!/b/dPMAAAAAAAAA&amp;bo=IAMNASADDQECy.8!&amp;rf=viewer_4" alt="Mou icon"></p>
+<p>首先，我将解释我们需要的<code>HTML</code>和<code>CSS</code>，我已经将其分解为四个部分。 一旦你了解了这些，我们将继续进行布局试验。</p>
+<p>如果您对<code>CSS Grid</code>比较陌生，则可能需要浏览一下这篇文章：<a href="http://www.css88.com/archives/8506" target="_blank" rel="external">5分钟学会 CSS Grid 布局</a>。当然，如果你想完全掌握<code>CSS Grid</code>布局，那么请看：<a href="http://www.css88.com/archives/8510" target="_blank" rel="external">CSS Grid 布局完全指南(图解 Grid 详细教程)</a>，特别文章中对<a href="http://www.css88.com/archives/8510#grid-terminology" target="_blank" rel="external">网格术语</a>的解释，可以帮助加快理解这篇文章。这篇文章讨论更多的是<code>Grid(网格)</code>布局的实际应用以及灵活性。</p>
+<h3 id="HTML结构"><a href="#HTML结构" class="headerlink" title="HTML结构"></a>HTML结构</h3><p>我们需要的第一件事是一点<code>HTML</code>。 一个网格容器（将变成一个网格元素）和网格项（header, menu, content, footer）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;container&quot;&gt;</div><div class="line">  &lt;div class=&quot;header&quot;&gt;HEADER&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;menu&quot;&gt;MENU&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;content&quot;&gt;CONTENT&lt;/div&gt;</div><div class="line">  &lt;div class=&quot;footer&quot;&gt;FOOTER&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<h3 id="设置基本的CSS"><a href="#设置基本的CSS" class="headerlink" title="设置基本的CSS"></a>设置基本的CSS</h3><p>那么我们需要在<code>container</code>元素设置<code>display: grid;</code>，将其设置为网格容器，并指定我们需要多少行和列。这是基本的CSS：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">.container &#123;</div><div class="line">    display: grid;    </div><div class="line">    grid-template-columns: repeat(12, 1fr);</div><div class="line">    grid-template-rows: 50px 350px 50px;</div><div class="line">    grid-gap: 5px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>我将在后面介绍内容，但是我首先让你了解一下。</p>
+<p>以上代码的意思是：使用<code>grid-template-columns</code>属性创建一个12列的网格，每个列都是一个单位宽度（总宽度的 1/12 ）。（愚人码头注：其中，<code>repeat(12, 1fr)</code>意思是<code>12</code>个重复的<code>1fr</code>值。<code>fr</code>是网格容器剩余空间的等分单位。）使用<code>grid-template-rows</code>属性创建3行，第一行高度是 50px，第二行高度是350px和第三行高度是50px。最后，使用<code>grid-gap</code>属性在网格中的网格项之间添加一个间隙。</p>
+<h3 id="添加grid-template-areas"><a href="#添加grid-template-areas" class="headerlink" title="添加grid-template-areas"></a>添加grid-template-areas</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">.container &#123;</div><div class="line">    display: grid;</div><div class="line">    grid-gap: 5px;    </div><div class="line">    grid-template-columns: repeat(12, 1fr);</div><div class="line">    grid-template-rows: 50px 350px 50px;</div><div class="line">    grid-template-areas:</div><div class="line">        &quot;h h h h h h h h h h h h&quot;</div><div class="line">        &quot;m m c c c c c c c c c c&quot;</div><div class="line">        &quot;f f f f f f f f f f f f&quot;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>grid-template-areas</code>属性背后的逻辑是你在代码中创建的网格可视化表示。正如你所看到的，它有3行12列，和我们在<code>grid-template-columns</code>和<code>grid-template-rows</code>中定义的正好呼应。</p>
+<p>每行代表一行，用网格术语来说是网格轨道(Grid Track)，每个字符（<code>h</code>，<code>m</code>，<code>c</code>，<code>f</code>）代表一个网格单元格。愚人码头注：其实是 网格区域(Grid Area) 名称，你可以使用任意名称。</p>
+<p>四个字母中的每一个现在都形成一个矩形<code>grid-area</code>。</p>
+<p>你可能已经猜到，我选择了字符<code>h</code>，<code>m</code>，<code>c</code>，<code>f</code>，是因为他们是<code>header</code>,<code>menu</code>,<code>content</code>和<code>footer</code>的首字母。当然，我可以把它们叫做任何想要的名称，但是使用他们所描述的东西的第一个字符更加容易让人理解。</p>
+<h3 id="给网格项设定网格区域名称"><a href="#给网格项设定网格区域名称" class="headerlink" title="给网格项设定网格区域名称"></a>给网格项设定网格区域名称</h3><p>现在我们需要将这些字符与网格中的网格项建立对应的连接。 要做到这一点，我们将在网格项使用<code>grid-area</code>属性：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">.header &#123;</div><div class="line">    grid-area: h;</div><div class="line">&#125;</div><div class="line">.menu &#123;</div><div class="line">    grid-area: m;</div><div class="line">&#125;</div><div class="line">.content &#123;</div><div class="line">    grid-area: c;</div><div class="line">&#125;</div><div class="line">.footer &#123;</div><div class="line">   grid-area: f;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以下是完整的布局效果：</p>
+<p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/DJDaNtepUu6ra4CY48f9fZnFHMlB.cZD4hJ6Ncx43fQ!/b/dPIAAAAAAAAA&amp;bo=AAXEAgAFxAIDACU!&amp;rf=viewer_4" alt="Mou icon"></p>
+<h3 id="尝试其他布局"><a href="#尝试其他布局" class="headerlink" title="尝试其他布局"></a>尝试其他布局</h3><p>现在，我们开始讨论 Grid(网格) 布局 特性的精妙之处，因为我们可以很容易地对布局进行修改尝试。只需修改<code>grid-template-areas</code>属性的字符即可。举个例子，把<code>menu</code>移到右边：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">grid-template-areas:</div><div class="line">    “h h h h h h h h h h h h”</div><div class="line">    &quot;c c c c c c c c c c m m”</div><div class="line">    “f f f f f f f f f f f f”;</div></pre></td></tr></table></figure>
+<p><strong>修改后的布局效果：</strong></p>
+<p><img src="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/GVoH2KkOufl*IgdSNXi2uCO.YkQ0XXKJdwQLZHlnDyc!/b/dPMAAAAAAAAA&amp;bo=HwPpAR8D6QEDACU!&amp;rf=viewer_4" alt="Mou icon"></p>
+<p>我们可以使用点 . 来创建空白的网格单元格。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">grid-template-areas:</div><div class="line">        “. h h h h h h h h h h .”</div><div class="line">        &quot;c c c c c c c c c c m m”</div><div class="line">        “. f f f f f f f f f f .”;</div></pre></td></tr></table></figure>
+<p><strong>修改的布局效果看起来是这样的：</strong></p>
+<p><img src="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/ntOK2.5SiBKEXZ.idytwCs9QaIxkmBkam1G3hWKMbTM!/b/dD4BAAAAAAAA&amp;bo=IAP7ASAD.wEDACU!&amp;rf=viewer_4" alt="Mou icon"></p>
+<p>现在，我建议你自己尝试修改代码，得到自己想要的或者文章开头gif动画演示的布局效果应该不是什么难事。为了方便起见，我建了一个<a href="https://codepen.io/feiwen8772/pen/pdYjgj" target="_blank" rel="external">codepen</a>，你可以在这里编辑，并实时查看 Grid(网格) 布局效果。</p>
+<h2 id="添加响应式布局"><a href="#添加响应式布局" class="headerlink" title="添加响应式布局"></a>添加响应式布局</h2><p>将<code>Grid(网格)</code>布局与响应式布局结合起来，简直就是一个杀手锏。因为在<code>Grid(网格)</code>布局之前，仅使用<code>HTML</code>和<code>CSS</code>实现的响应式布局不可能的做到简单而又完美。假设你想在移动设备上查看的是：标题旁边是菜单。那么你可以简单地这样做：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">@media screen and (max-width: 640px) &#123;</div><div class="line">    .container &#123;</div><div class="line">        grid-template-areas:</div><div class="line">            &quot;m m m m m m h h h h h h&quot;</div><div class="line">            &quot;c c c c c c c c c c c c&quot;</div><div class="line">            &quot;f f f f f f f f f f f f&quot;;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>你可以看到以下效果：</strong></p>
+<p><img src="http://a1.qpic.cn/psb?/V11KiFfB3TEN6V/sbFI4.k7GqFMem4thZHQ9IZzUWdweJTF2Ur0Z5NuF5E!/b/dD4BAAAAAAAA&amp;bo=IAN0ASADdAECWHw!&amp;rf=viewer_4" alt="Mou icon"></p>
+<p>请记住，所有这些更改都是使用纯<code>CSS</code>完成的，不需要修改<code>HTML</code>。 无论<code>div</code>标签如何在<code>HTML</code>中是怎么样的顺序结构，我们都可以随意转换。（愚人码头注：这点与<code>flexbox</code>类似，网格项（grid items）的源顺序无关紧要。你的<code>CSS</code>可以以任何顺序放置它们，这使得使用 媒体查询（media queries）重新排列网格变得非常容易。）</p>
+<p>这被称为结构和表现分离，<code>Grid(网格)</code>布局真正做到了这点，对于<code>CSS</code>来说是一个巨大的进步。</p>
+<p>它允许<code>HTML</code>成为它想要的样子: 作为内容的标记。<code>HTML</code>结构不再受限于样式表现，比如不要为了实现某种布局而多次嵌套，现在这些都可以让<code>CSS</code>来完成。</p>
+<p>如果你错过了<code>Grid(网格)</code>布局的最简入门，请阅读：<a href="http://www.css88.com/archives/8506" target="_blank" rel="external">5分钟学会CSS Grid 布局</a>。 了解更多请阅读：<a href="http://www.css88.com/archives/8510" target="_blank" rel="external">CSS Grid布局完全指南(图解 Grid 详细教程)</a>，让你体会<code>Grid</code>布局真正的强大和灵活。</p>
+<p>来自：<a href="https://juejin.im/entry/5a25e9766fb9a0452341bb78?utm_source=gold_browser_extension" target="_blank" rel="external">https://juejin.im/entry/5a25e9766fb9a0452341bb78?utm_source=gold_browser_extension</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>本人穷鬼，您的支持将鼓励我富裕！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="韓锋 WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="韓锋 Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
+          
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
+          
+            <a href="/tags/grid/" rel="tag"># grid</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/29/loud-links/" rel="next" title="loud-links">
+                <i class="fa fa-chevron-left"></i> loud-links
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjA3MC84NjM0"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="韓锋" />
+          <p class="site-author-name" itemprop="name">韓锋</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">65</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hfengyn" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://weibo.com/u/6072802015" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                    
+                      Weibo
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/wang-tian-ming-18" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://menggeniu.github.io/" title="牛梦鸽" target="_blank">牛梦鸽</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://xxq1014.github.io/" title="徐许钱" target="_blank">徐许钱</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://liguoping2016.github.io/" title="李国萍" target="_blank">李国萍</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://yang867381349.github.io/" title="杨军权" target="_blank">杨军权</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://zhoushujuan.github.io/" title="周书娟" target="_blank">周书娟</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我的要创建的网格"><span class="nav-number">1.</span> <span class="nav-text">我的要创建的网格</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML结构"><span class="nav-number">1.1.</span> <span class="nav-text">HTML结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置基本的CSS"><span class="nav-number">1.2.</span> <span class="nav-text">设置基本的CSS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加grid-template-areas"><span class="nav-number">1.3.</span> <span class="nav-text">添加grid-template-areas</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给网格项设定网格区域名称"><span class="nav-number">1.4.</span> <span class="nav-text">给网格项设定网格区域名称</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尝试其他布局"><span class="nav-number">1.5.</span> <span class="nav-text">尝试其他布局</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加响应式布局"><span class="nav-number">2.</span> <span class="nav-text">添加响应式布局</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">韓锋</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("u5uAwgrqBaJAMntLKGaFmqjd-gzGzoHsz", "DvOBX7SC3nw7W7qUIy0ofrnp");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
