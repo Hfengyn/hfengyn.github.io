@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTTP,HTTPS," />
+  <meta name="keywords" content="CSS,CSS3,HTML," />
 
 
 
@@ -94,22 +94,18 @@
 
 
 
-<meta name="description" content="HTTPS是互联网 web 大势所趋。各大网站都已陆续部署了HTTPS，这篇文章我们来探讨什么是HTTPS以及为什么要部署HTTPS。 这篇文章收录在《Said - 从HTTP到HTTPS》系列：  从 HTTP 到 HTTPS - 什么是 HTTPS 从 HTTP 到 HTTPS - IIS如何部署 HTTPS 从 HTTP 到 HTTPS - 网站部署 HTTPS 中需要做的事情  HTTP当">
-<meta name="keywords" content="HTTP,HTTPS">
+<meta name="description" content="网站中部分页面为了更好的用户体验，是否可以隐藏滚动条，同时又保证页面可以滚动？ 使用 overflow:hidden 隐藏滚动条，但存在的问题是：页面或元素失去了滚动的特性。由于只需要兼容移动浏览器（Chrome 和 Safari），于是想到了自定义滚动条的伪对象选择器::-webkit-scrollbar。 关于这个选择器的介绍可以参考： Styling Scrollbars Custom Sc">
+<meta name="keywords" content="CSS,CSS3,HTML">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从HTTP到HTTPS-什么是HTTPS">
-<meta property="og:url" content="http://yoursite.com/2016/10/16/http-https/index.html">
+<meta property="og:title" content="CSS 实现隐藏滚动条同时滚动">
+<meta property="og:url" content="http://yoursite.com/2018/07/25/hidden/index.html">
 <meta property="og:site_name" content="奔跑中逆袭">
-<meta property="og:description" content="HTTPS是互联网 web 大势所趋。各大网站都已陆续部署了HTTPS，这篇文章我们来探讨什么是HTTPS以及为什么要部署HTTPS。 这篇文章收录在《Said - 从HTTP到HTTPS》系列：  从 HTTP 到 HTTPS - 什么是 HTTPS 从 HTTP 到 HTTPS - IIS如何部署 HTTPS 从 HTTP 到 HTTPS - 网站部署 HTTPS 中需要做的事情  HTTP当">
+<meta property="og:description" content="网站中部分页面为了更好的用户体验，是否可以隐藏滚动条，同时又保证页面可以滚动？ 使用 overflow:hidden 隐藏滚动条，但存在的问题是：页面或元素失去了滚动的特性。由于只需要兼容移动浏览器（Chrome 和 Safari），于是想到了自定义滚动条的伪对象选择器::-webkit-scrollbar。 关于这个选择器的介绍可以参考： Styling Scrollbars Custom Sc">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/nfDtXkVk38vmoo.xwwV92iXe.s4I8iq0RYIg5XiaocA!/b/dNwAAAAAAAAA&bo=eAKlAXgCpQEDByI!&rf=viewer_4">
-<meta property="og:image" content="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/6.c3kMnTuIL*TZyjHrPGdMG81xMdVS6KJOI0F3hh3Pg!/b/dAkBAAAAAAAA&bo=0gFPAdIBTwEDACU!&rf=viewer_4">
-<meta property="og:image" content="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/nt2vaSihOmZMnM.qpOSnuET3tAm.7SZdKwA8vIOm9PY!/b/dHkBAAAAAAAA&bo=vgTQAr4E0AIDACU!&rf=viewer_4">
-<meta property="og:updated_time" content="2017-09-02T01:48:14.916Z">
+<meta property="og:updated_time" content="2018-07-25T03:04:20.434Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从HTTP到HTTPS-什么是HTTPS">
-<meta name="twitter:description" content="HTTPS是互联网 web 大势所趋。各大网站都已陆续部署了HTTPS，这篇文章我们来探讨什么是HTTPS以及为什么要部署HTTPS。 这篇文章收录在《Said - 从HTTP到HTTPS》系列：  从 HTTP 到 HTTPS - 什么是 HTTPS 从 HTTP 到 HTTPS - IIS如何部署 HTTPS 从 HTTP 到 HTTPS - 网站部署 HTTPS 中需要做的事情  HTTP当">
-<meta name="twitter:image" content="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/nfDtXkVk38vmoo.xwwV92iXe.s4I8iq0RYIg5XiaocA!/b/dNwAAAAAAAAA&bo=eAKlAXgCpQEDByI!&rf=viewer_4">
+<meta name="twitter:title" content="CSS 实现隐藏滚动条同时滚动">
+<meta name="twitter:description" content="网站中部分页面为了更好的用户体验，是否可以隐藏滚动条，同时又保证页面可以滚动？ 使用 overflow:hidden 隐藏滚动条，但存在的问题是：页面或元素失去了滚动的特性。由于只需要兼容移动浏览器（Chrome 和 Safari），于是想到了自定义滚动条的伪对象选择器::-webkit-scrollbar。 关于这个选择器的介绍可以参考： Styling Scrollbars Custom Sc">
 
 
 
@@ -139,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/10/16/http-https/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/25/hidden/"/>
 
 
 
 
 
-  <title>从HTTP到HTTPS-什么是HTTPS | 奔跑中逆袭</title>
+  <title>CSS 实现隐藏滚动条同时滚动 | 奔跑中逆袭</title>
   
 
 
@@ -296,7 +292,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/16/http-https/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/25/hidden/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="韓锋">
@@ -313,7 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">从HTTP到HTTPS-什么是HTTPS</h1>
+          <h1 class="post-title" itemprop="name headline">CSS 实现隐藏滚动条同时滚动</h1>
         
 
         <div class="post-meta">
@@ -325,8 +321,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-16T19:50:21+08:00">
-                2016-10-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-25T11:02:05+08:00">
+                2018-07-25
               </time>
             
 
@@ -343,7 +339,7 @@
 
           
           
-             <span id="/2016/10/16/http-https/" class="leancloud_visitors" data-flag-title="从HTTP到HTTPS-什么是HTTPS">
+             <span id="/2018/07/25/hidden/" class="leancloud_visitors" data-flag-title="CSS 实现隐藏滚动条同时滚动">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -374,82 +370,17 @@
       
 
       
-        <p>HTTPS是互联网 web 大势所趋。各大网站都已陆续部署了HTTPS，这篇文章我们来探讨什么是HTTPS以及为什么要部署HTTPS。</p>
-<p>这篇文章收录在《Said - 从HTTP到HTTPS》系列：</p>
-<ul>
-<li>从 HTTP 到 HTTPS - 什么是 HTTPS</li>
-<li>从 HTTP 到 HTTPS - IIS如何部署 HTTPS</li>
-<li>从 HTTP 到 HTTPS - 网站部署 HTTPS 中需要做的事情</li>
-</ul>
-<h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>当你在浏览器输入一个网址 (例如 <a href="http://tasaid.com)的时候，浏览器发起一个" target="_blank" rel="external">http://tasaid.com)的时候，浏览器发起一个</a> HTTP 请求，带着请求信息 (参见<a href="http://kb.cnblogs.com/page/92320/" target="_blank" rel="external">HTTP Headers</a>)，连接到服务器，把请求信息递给服务器，服务器收到信息之后，解析相关的信息，然后进行处理，再返回浏览器请求的数据。</p>
-<p>简单来说是这么一个流程：</p>
-<ol>
-<li>小明 跟 浏览器爸爸 说我想要去中关村某个店家拿一些东西 (发起请求)</li>
-<li>浏览器爸爸 就把 小明 要的东西记在一张清单上 (生成HTTP协议)</li>
-<li>然后 浏览器爸爸 派出一个 线程小弟，噌噌噌跑到中关村的店里，把清单递给 店家，说小明要这些东西 (进行传输)</li>
-<li>店家 让 线程小弟 稍等，然后去屋子里面拿小明的这些东西 (服务器收到请求)</li>
-<li>店家 把东西拿出来后，并且也打印了一份清单，让 线程小弟 带着清单和东西一起拿回去 (服务器处理请求完毕)</li>
-<li>然后 线程小弟 回到 浏览器爸爸 那边，把服务器给的清单和物品交给浏览器爸爸，浏览器爸爸根据清单核对物品 (浏览器处理响应)</li>
-<li>然后把物品打包交给了 小明 (浏览器渲染并呈现界面)</li>
-</ol>
-<p>看图说话：</p>
-<p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/nfDtXkVk38vmoo.xwwV92iXe.s4I8iq0RYIg5XiaocA!/b/dNwAAAAAAAAA&amp;bo=eAKlAXgCpQEDByI!&amp;rf=viewer_4" alt="Mou icon"></p>
-<p>这其中有个问题，浏览器爸爸和服务器都没有验证清单信息的有效性和对方的身份。万一有人在中间把线程小哥拦下来，暴揍一顿，然后把物品清单给换了怎么办？或者有人把线程小哥在半路上暴揍一顿，拿了清单换了另外一个小哥怎么办？</p>
-<p>这是个很严肃的问题：假如服务器要把一些东西锁在柜子里，需要小明给密码才可以打开柜子。然后小明把密码写在清单上让浏览器爸爸交给服务器。这时候，如果这张清单被人拦截下来，不就得到了小明的密码？</p>
-<p>简单来说，传输的信息中包含用户密码，被拦截了怎么办？</p>
-<h3 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h3><p>正因为HTTP请求有这些安全性的问题，所以HTTPS诞生了，致力于解决了这些安全性问题，我们进行一下对比：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">安全性</th>
-<th style="text-align:left">HTTP</th>
-<th style="text-align:left">HTTPS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">窃听风险</td>
-<td style="text-align:left">传递的信息是明文的，可能会被有心人拦截下来窃听</td>
-<td style="text-align:left">信息加密传播</td>
-</tr>
-<tr>
-<td style="text-align:left">篡改风险</td>
-<td style="text-align:left">传递的信息可能会被篡改</td>
-<td style="text-align:left">信息校验，一旦被篡改立刻就会被发现</td>
-</tr>
-<tr>
-<td style="text-align:left">伪装风险</td>
-<td style="text-align:left">没有验证通信另外一头对方的身份，可能遭遇伪装</td>
-<td style="text-align:left">身份校验</td>
-</tr>
-</tbody>
-</table>
-<p>那么HTTPS是如何做到更安全的呢？</p>
-<p>简单来说，HTTPS 即是在 HTTP 下加入了一层 SSL 加密，所以被称为HTTPS。具体的加密过程则是<a href="https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86" target="_blank" rel="external">公匙加密法</a>：</p>
-<ul>
-<li>客户端向服务器索要公匙，然后使用公匙加密信息</li>
-<li>服务器收到加密后的信息，用自己的私匙解密</li>
-</ul>
-<p>公匙密码和算法都是公开的，而私匙则是保密的。加密使用的公匙和解码使用的密匙都是不相同的，因此这是一个 非对称加密 算法。</p>
-<h3 id="数字证书"><a href="#数字证书" class="headerlink" title="数字证书"></a>数字证书</h3><p>提及 HTTPS ，就会听到大家说需要证书才能部署，那么什么是证书呢？</p>
-<p>因为互联网不安全，公匙也是信息的一部分，也是会有被篡改的风险的。所以引入了互联网权威机构 - CA 机构，又称为证书授权 (Certificate Authority) 机构，浏览器会内置这些”受信任的根证书颁发机构” (即 CA)。</p>
-<p>服务端向权威的身份鉴定 CA 机构申请数字证书，CA 机构验证了网站之后，会把网站录入到内部列表，采用 Hash 把服务端的一些相关信息生成摘要，然后 CA 机构用自己的私匙，把服务端的公匙和相关信息一起加密，然后给申请证书的服务端颁发数字证书，用于其他客户端 (比如浏览器) 认证这个网站的公匙。</p>
-<p>客户端通过服务端下发的证书，找到对应的 CA，然后向 CA 验证这个证书是否有效，CA 验证通过之后，下发服务端的公匙。</p>
-<p>因为 CA 是权威并且可信的，所以客户端 (浏览器) 信任 CA，而 CA 又信任经过认证的服务端 ，所以客户端 (浏览器) 也信任这个服务端，这就是<a href="https://en.wikipedia.org/wiki/Chain_of_trust" target="_blank" rel="external">信任链 (Chain Of Trust)</a>。</p>
-<p>而 CA 颁发的数字证书，一般包含这些信息：</p>
-<p><img src="http://a2.qpic.cn/psb?/V11KiFfB3TEN6V/6.c3kMnTuIL*TZyjHrPGdMG81xMdVS6KJOI0F3hh3Pg!/b/dAkBAAAAAAAA&amp;bo=0gFPAdIBTwEDACU!&amp;rf=viewer_4" alt="Mou icon"></p>
-<p>简单来说：为了保证公匙是安全的，所以通过数字证书验证公匙。</p>
-<h3 id="加密通信"><a href="#加密通信" class="headerlink" title="加密通信"></a>加密通信</h3><p>一条完整的HTTPS请求应该是这样的：</p>
-<ol>
-<li>客户端 (浏览器) 发起 HTTP 请求，请求连接服务端，发送支持的加密通信协议 (和版本)，并且生成一个随机数，后续用于生成”对话密钥”。</li>
-<li>服务端确认加密通信协议 (和版本)，同时也生成一个随机数，后续用于生成”对话密匙”，并且将 CA 颁发的数字证书，一起发送给客户端。</li>
-<li>客户端收到数字证书后，检测内置的”受信任的根证书颁发机构”，查看解开数字证书的公匙是否在。</li>
-<li>如果解开数字证书的公匙存在，则使用它解开数字证书，得到正确的服务器公匙，同时再次生成一个随机数，用于服务器公匙加密，并发送给服务器。</li>
-<li>此时本地和服务器同时将三个随机数，根据约定的加密方法进行加密，各自生成本次会话的所使用的同一把 “会话密匙” 。<br>6.到这里，认证阶段已经完毕，数据传输从 非对称加密 换成了 对称加密 (因为考虑到性能)，接下来所有的数据传输都是使用HTTP协议进行传输，只不过使用了 “会话密匙” 来加密内容。</li>
-</ol>
-<p>见下图：</p>
-<p><img src="http://a3.qpic.cn/psb?/V11KiFfB3TEN6V/nt2vaSihOmZMnM.qpOSnuET3tAm.7SZdKwA8vIOm9PY!/b/dHkBAAAAAAAA&amp;bo=vgTQAr4E0AIDACU!&amp;rf=viewer_4" alt="Mou icon"></p>
-<p>来自：<a href="http://www.cnblogs.com/silin6/p/5928503.html" target="_blank" rel="external">http://www.cnblogs.com/silin6/p/5928503.html</a></p>
+        <p>网站中部分页面为了更好的用户体验，是否可以隐藏滚动条，同时又保证页面可以滚动？</p>
+<p>使用 overflow:hidden 隐藏滚动条，但存在的问题是：页面或元素失去了滚动的特性。<br>由于只需要兼容移动浏览器（Chrome 和 Safari），于是想到了自定义滚动条的伪对象选择器<br>::-webkit-scrollbar。</p>
+<p>关于这个选择器的介绍可以参考：</p>
+<p><a href="https://webkit.org/blog/363/styling-scrollbars/" target="_blank" rel="external">Styling Scrollbars</a></p>
+<p><a href="https://css-tricks.com/custom-scrollbars-in-webkit/" target="_blank" rel="external">Custom Scrollbars in WebKit</a></p>
+<p><strong>应用如下 CSS 可以隐藏滚动条：</strong></p>
+<p><code>.element::-webkit-scrollbar {display:none}</code></p>
+<p>如果要兼容 PC 其他浏览器（IE、Firefox 等），国外一位才人 John Kurlak 也研究出了一种办法。在容器外面再嵌套一层<code>overflow:hidden</code>内部内容再限制尺寸和外部嵌套层一样，就变相隐藏了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;div class=&quot;outer-container&quot;&gt;</div><div class="line">	&lt;div class=&quot;inner-container&quot;&gt;</div><div class="line">		&lt;div class=&quot;content&quot;&gt;</div><div class="line">			......</div><div class="line">		&lt;/div&gt;</div><div class="line">	&lt;/div&gt;</div><div class="line">&lt;/div&gt;</div><div class="line">.outer-container,.content &#123;</div><div class="line">	width: 200px; height: 200px;</div><div class="line">&#125;</div><div class="line">.outer-container &#123;</div><div class="line">	position: relative;</div><div class="line">	overflow: hidden;</div><div class="line">&#125;</div><div class="line">.inner-container &#123;</div><div class="line">	position: absolute; left: 0;</div><div class="line">	overflow-x: hidden;</div><div class="line">	overflow-y: scroll;</div><div class="line">&#125;</div><div class="line"></div><div class="line">/* for Chrome */</div><div class="line">.inner-container::-webkit-scrollbar &#123;</div><div class="line">	display: none;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>参考：Hiding Vertical Scrollbars with Pure CSS in Chrome, IE (6+), Firefox, Opera, and Safari</p>
+<p>来自：<a href="https://www.cnblogs.com/alice626/p/6206760.html" target="_blank" rel="external">https://www.cnblogs.com/alice626/p/6206760.html</a></p>
 
       
     </div>
@@ -496,9 +427,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/HTTP/" rel="tag"># HTTP</a>
+            <a href="/tags/CSS/" rel="tag"># CSS</a>
           
-            <a href="/tags/HTTPS/" rel="tag"># HTTPS</a>
+            <a href="/tags/CSS3/" rel="tag"># CSS3</a>
+          
+            <a href="/tags/HTML/" rel="tag"># HTML</a>
           
         </div>
       
@@ -511,8 +444,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/16/transformjs/" rel="next" title="移动Web利器transformjs入门">
-                <i class="fa fa-chevron-left"></i> 移动Web利器transformjs入门
+              <a href="/2018/04/05/localtunnel/" rel="next" title="Localtunnel内网穿透工具的安装与使用">
+                <i class="fa fa-chevron-left"></i> Localtunnel内网穿透工具的安装与使用
               </a>
             
           </div>
@@ -520,10 +453,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/10/17/ES6/" rel="prev" title="再不用ES6就Out了--es6变量声明">
-                再不用ES6就Out了--es6变量声明 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -583,17 +512,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -713,22 +633,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP"><span class="nav-number">1.</span> <span class="nav-text">HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTPS"><span class="nav-number">2.</span> <span class="nav-text">HTTPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数字证书"><span class="nav-number">3.</span> <span class="nav-text">数字证书</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加密通信"><span class="nav-number">4.</span> <span class="nav-text">加密通信</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
