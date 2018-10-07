@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[JS获取自定义属性data值]]></title>
+    <url>%2F2018%2F10%2F07%2Fjsdataname%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021222324252627&lt;body&gt;&lt;div id=&quot;tree&quot; data-leaves=&quot;47&quot; data-plant-height=&quot;2.4m&quot;&gt;&lt;/div&gt;&lt;script&gt;var tree = document.getElementById(&quot;tree&quot;);//getAttribute()取值属性console.log(tree.getAttribute(&quot;data-leaves&quot;));console.log(tree.getAttribute(&quot;data-plant-height&quot;));//setAttribute()赋值属性tree.setAttribute(&quot;data-leaves&quot;,&quot;48&quot;);//data-前缀属性可以在JS中通过dataset取值，更加方便console.log(tree.dataset.leaves);console.log(tree.dataset.plantHeight);//赋值tree.dataset.plantHeight = &quot;3m&quot;;tree.dataset.leaves--;//新增data属性tree.dataset.age = &quot;100&quot;;//删除，设置成null，或者deletetree.dataset.leaves = null;delete tree.dataset.age;//jQuery的data方法var $tree = $(&apos;#tree&apos;);console.log($tree.data(&quot;plant-height&quot;));&lt;/script&gt;&lt;/body&gt; 作者：kongjunchao159 来自：https://blog.csdn.net/kongjunchao159/article/details/47317763]]></content>
+      <tags>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JavaScript 扩展运算符]]></title>
+    <url>%2F2018%2F09%2F14%2Foperator%2F</url>
+    <content type="text"><![CDATA[扩展运算符格式 扩展运算符格式很简单，就是三个点(...) 扩展运算符作用？？？ 扩展运算符允许一个表达式在期望多个参数（用于函数调用）或多个元素（用于数组字面量）或多个变量（用于解构赋值）的位置扩展。 下面开始通过四个例子来深刻理解扩展运算符 创建一个数组middle 创建第二个包含middle的数组 输出结果 1234var middle = [3, 4];var arr = [1, 2, middle, 5, 6];console.log(arr);// [1, 2, [3, 4], 5, 6] 在上例中，没有使用扩展运算符。middle作为数组放入另一个数组中。 但是如果想让输出结果只有一个数组？？？ 这时候就用到扩展运算符，看下面例子，除了使用扩展运算符其他都与上面例子相同。 1234var middle = [3, 4];var arr = [1, 2, ...middle, 5, 6];console.log(arr);// [1, 2, 3, 4, 5, 6] 当创建数组arr和使用在middle数组上使用扩展运算符时，不是将middle数组直接插入到arr中，而是将middle数组扩展，然后将元素插入到arr中。 复制数组slice()是JavaScript数组的方法，作用是复制数组。我们同样可以使用扩展运算符复制数组。 1234var arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];var arr2 = [...arr];console.log(arr2);// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;] arr数组中的元素扩展成为单独元素被分配到arr2中。现在可以随意改变arr2数组，且都不会对源数组arr产生影响。 这是因为，arr数组值被扩展后添加到arr2数组中，我们设置arr2等于arr的值，而不是其本身。我们可以关注没有扩展运算符时发生事情，就能理解了。 如果创建数组然后设置另一个数组等于其本身，如下： 1234var arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];var arr2 = arr;console.log(arr2);// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;] 现在我们将arr2数组赋值给arr数组，这意味着只要改变arr2，arr数组就会发生变化。 12345arr2.push(&apos;d&apos;);console.log(arr2);// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;]console.log(arr);// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;] 拼接数组使用扩展运算符可以代替concat()来拼接数组。 12345var arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];var arr2 = [&apos;d&apos;, &apos;e&apos;, &apos;f&apos;];arr1 = arr.concat(arr2);console.log(arr);// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;, &apos;f&apos;] 使用扩展运算符 12345var arr = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;];var arr2 = [&apos;d&apos;, &apos;e&apos;, &apos;f&apos;];arr = [...arr, ...arr2];console.log(arr);// [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;, &apos;e&apos;, &apos;f&apos;] Math也可以使用math函数连同扩展运算符。如这个例子中，将使用Math.max() Math.max()将返回一组数最大值。 123456Math.max();// -InfinityMath.max(1, 2, 3);// 3Math.max(100, 3, 4);// 100 在没有扩展运算符，在数组上使用Math.max()最容易方法就是使用.apply()。 123456var arr = [2, 4, 8, 6, 0];function max(arr) &#123; return Math.max.apply(null, arr);&#125;console.log(max(arr));// 8 现在看看使用扩展运算符做同样事情。只需要两行代码就可以做到同样效果。 1234var arr = [2, 4, 8, 6, 0];var max = Math.max(...arr);console.log(max);// 8 字符串转数组使用扩展运算符将字符串转换为数组。 1234var str = &quot;hello&quot;;var chars = [...str];console.log(chars); // [&apos;h&apos;, &apos;e&apos;,&apos; l&apos;,&apos; l&apos;, &apos;o&apos;] 作者：yuyurenjie 链接：https://juejin.im/post/592f63f0ac502e00686842c2]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[CSS 实现隐藏滚动条同时滚动]]></title>
     <url>%2F2018%2F07%2F25%2Fhidden%2F</url>
     <content type="text"><![CDATA[网站中部分页面为了更好的用户体验，是否可以隐藏滚动条，同时又保证页面可以滚动？ 使用 overflow:hidden 隐藏滚动条，但存在的问题是：页面或元素失去了滚动的特性。由于只需要兼容移动浏览器（Chrome 和 Safari），于是想到了自定义滚动条的伪对象选择器::-webkit-scrollbar。 关于这个选择器的介绍可以参考： Styling Scrollbars Custom Scrollbars in WebKit 应用如下 CSS 可以隐藏滚动条： .element::-webkit-scrollbar {display:none} 如果要兼容 PC 其他浏览器（IE、Firefox 等），国外一位才人 John Kurlak 也研究出了一种办法。在容器外面再嵌套一层overflow:hidden内部内容再限制尺寸和外部嵌套层一样，就变相隐藏了。 123456789101112131415161718192021222324&lt;div class=&quot;outer-container&quot;&gt; &lt;div class=&quot;inner-container&quot;&gt; &lt;div class=&quot;content&quot;&gt; ...... &lt;/div&gt; &lt;/div&gt;&lt;/div&gt;.outer-container,.content &#123; width: 200px; height: 200px;&#125;.outer-container &#123; position: relative; overflow: hidden;&#125;.inner-container &#123; position: absolute; left: 0; overflow-x: hidden; overflow-y: scroll;&#125;/* for Chrome */.inner-container::-webkit-scrollbar &#123; display: none;&#125; 参考：Hiding Vertical Scrollbars with Pure CSS in Chrome, IE (6+), Firefox, Opera, and Safari 来自：https://www.cnblogs.com/alice626/p/6206760.html]]></content>
@@ -15,8 +31,8 @@
     <url>%2F2018%2F04%2F05%2Flocaltunnel%2F</url>
     <content type="text"><![CDATA[我们都知道内网（同个局域网内），是通过localhost或者127.0.0.1访问，而外网是不能访问我们开启的内网服务器。因此可以使用内网穿透工具，本地开启的服务器，外网同样也可以访问。 Localtunnel可以方便快捷的实现你的本地web服务通过外网访问，无需修改DNS和防火墙设置 接下来让我们说说如何使用localtunnel 安装node.jslocaltunnel是基于Node.js的一个模块，所以首先需要安装node.js下载链接 安装localtunnel进入命令行输入如下命令，完成localtunnel的安装 1npm install -g localtunnel 安装localtunnel开启web服务器后（例如http://localhost:80），在命令行中输入如下命令即可获取到一个随机的url，例如https://yhne.localtunnel.me，通过此域名即可访问到你的本地server 1lt --port 80 或 lt -p 80 如果想通过固定的域名访问，则可以通过以下命令进行设置，成功后可通过https://test.localtunnel.me而访问到本地服务器。 1lt --subdomain test --port 80 或 lt -s test -p 80 来自：https://blog.csdn.net/chinazgr/article/details/53861831]]></content>
       <tags>
-        <tag>技能</tag>
         <tag>安装</tag>
+        <tag>技能</tag>
         <tag>localtunnel</tag>
       </tags>
   </entry>
