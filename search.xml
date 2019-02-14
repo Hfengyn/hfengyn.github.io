@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[php+mysql模糊查询语句]]></title>
+    <url>%2F2019%2F02%2F13%2Fphp-mysql%2F</url>
+    <content type="text"><![CDATA[一般模糊查询语句如下 SELECT字段FROM表WHERE某字段Like条件 其中关于条件，SQL提供了四种匹配模式： %表示任意0个或多个字符。可匹配任意类型和长度的字符，有些情况下若是中文，请使用两个百分号（%%）表示。 比如SELECT * FROM [user] WHERE u_name LIKE &#39;%三%&#39; 将会把u_name为“张三”，“张猫三”、“三脚猫”，“唐三藏”等等有“三”的记录全找出来。 另外，如果需要找出u_name中既有“三”又有“猫”的记录，请使用and条件 SELECT * FROM [user] WHERE u_name LIKE &#39;%三%&#39; AND u_name LIKE &#39;%猫%&#39; 若使用SELECT * FROM [user] WHERE u_name LIKE &#39;%三%猫%&#39; 虽然能搜索出“三脚猫”，但不能搜索出符合条件的“张猫三”。 _表示任意单个字符。匹配单个任意字符，它常用来限制表达式的字符长度语句： 比如SELECT * FROM [user] WHERE u_name LIKE &#39;_三_&#39; 只找出“唐三藏”这样u_name为三个字且中间一个字是“三”的； 再比如SELECT * FROM [user] WHERE u_name LIKE &#39;三__&#39; 只找出“三脚猫”这样u_name为三个字且第一个字是“三”的； [ ]表示括号内所列字符中的一个（类似正则表达式）。指定一个字符、字符串或范围，要求所匹配对象为它们中的任一个。 比如SELECT * FROM [user] WHERE u_name LIKE &#39;[张李王]三&#39; 将找出“张三”、“李三”、“王三”（而不是“张李王三”）； 如[ ]内有一系列字符（01234、abcde之类的）则可略写为“0-4”、“a-e” SELECT * FROM [user] WHERE u_name LIKE &#39;老[1-9]&#39; 将找出“老1”、“老2”、……、“老9”； [^ ]表示不在括号所列之内的单个字符。其取值和[]相同，但它要求所匹配对象为指定字符以外的任一个字符。 比如SELECT * FROM [user] WHERE u_name LIKE &#39;[^张李王]三&#39; 将找出不姓“张”、“李”、“王”的“赵三”、“孙三”等； SELECT * FROM [user] WHERE u_name LIKE &#39;老[^1-4]&#39; 将排除“老1”到“老4”，寻找“老5”、“老6”、…… 查询内容包含通配符时由于通配符的缘故，导致我们查询特殊字符“%”、“_”、“[”的语句无法正常实现，而把特殊字符用“[ ]”括起便可正常查询。据此我们写出以下函数： 123456function sqlencode(str)str=replace(str,&quot;[&quot;,&quot;[[]&quot;) &apos;此句一定要在最前str=replace(str,&quot;_&quot;,&quot;[_]&quot;)str=replace(str,&quot;%&quot;,&quot;[%]&quot;)sqlencode=strend function 作者：寒易凝 链接：https://zhidao.baidu.com/question/179370176.html]]></content>
+      <tags>
+        <tag>php</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[JS获取自定义属性data值]]></title>
     <url>%2F2018%2F10%2F07%2Fjsdataname%2F</url>
     <content type="text"><![CDATA[123456789101112131415161718192021222324252627&lt;body&gt;&lt;div id=&quot;tree&quot; data-leaves=&quot;47&quot; data-plant-height=&quot;2.4m&quot;&gt;&lt;/div&gt;&lt;script&gt;var tree = document.getElementById(&quot;tree&quot;);//getAttribute()取值属性console.log(tree.getAttribute(&quot;data-leaves&quot;));console.log(tree.getAttribute(&quot;data-plant-height&quot;));//setAttribute()赋值属性tree.setAttribute(&quot;data-leaves&quot;,&quot;48&quot;);//data-前缀属性可以在JS中通过dataset取值，更加方便console.log(tree.dataset.leaves);console.log(tree.dataset.plantHeight);//赋值tree.dataset.plantHeight = &quot;3m&quot;;tree.dataset.leaves--;//新增data属性tree.dataset.age = &quot;100&quot;;//删除，设置成null，或者deletetree.dataset.leaves = null;delete tree.dataset.age;//jQuery的data方法var $tree = $(&apos;#tree&apos;);console.log($tree.data(&quot;plant-height&quot;));&lt;/script&gt;&lt;/body&gt; 作者：kongjunchao159 来自：https://blog.csdn.net/kongjunchao159/article/details/47317763]]></content>
@@ -31,8 +40,8 @@
     <url>%2F2018%2F04%2F05%2Flocaltunnel%2F</url>
     <content type="text"><![CDATA[我们都知道内网（同个局域网内），是通过localhost或者127.0.0.1访问，而外网是不能访问我们开启的内网服务器。因此可以使用内网穿透工具，本地开启的服务器，外网同样也可以访问。 Localtunnel可以方便快捷的实现你的本地web服务通过外网访问，无需修改DNS和防火墙设置 接下来让我们说说如何使用localtunnel 安装node.jslocaltunnel是基于Node.js的一个模块，所以首先需要安装node.js下载链接 安装localtunnel进入命令行输入如下命令，完成localtunnel的安装 1npm install -g localtunnel 安装localtunnel开启web服务器后（例如http://localhost:80），在命令行中输入如下命令即可获取到一个随机的url，例如https://yhne.localtunnel.me，通过此域名即可访问到你的本地server 1lt --port 80 或 lt -p 80 如果想通过固定的域名访问，则可以通过以下命令进行设置，成功后可通过https://test.localtunnel.me而访问到本地服务器。 1lt --subdomain test --port 80 或 lt -s test -p 80 来自：https://blog.csdn.net/chinazgr/article/details/53861831]]></content>
       <tags>
-        <tag>安装</tag>
         <tag>技能</tag>
+        <tag>安装</tag>
         <tag>localtunnel</tag>
       </tags>
   </entry>
