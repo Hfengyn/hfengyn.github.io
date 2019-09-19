@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="技能,HTTP,缓存机制,HTML," />
+  <meta name="keywords" content="技能,HTTP,HTML,缓存机制," />
 
 
 
@@ -95,7 +95,7 @@
 
 
 <meta name="description" content="前言浏览器的缓存机制其实是一个很好的优化机制，可以避免重复请求相同的资源，减轻服务器的压力，也可以加快用户的二次读取。但凡事都有优缺点，缓存的存在会导致css，js或者其他静态资源不能及时更新。有时修改了html，html一般不会读取缓存，但css和js读取了缓存，就会出现一些莫名其妙的问题，而到了用户那边，则会一脸懵逼。 浏览器的缓存原理这个我也不太懂，就知道分为强制缓存和协商缓存。当二次打开网">
-<meta name="keywords" content="技能,HTTP,缓存机制,HTML">
+<meta name="keywords" content="技能,HTTP,HTML,缓存机制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何解决静态资源的缓存问题">
 <meta property="og:url" content="http://yoursite.com/2019/09/19/cache/index.html">
@@ -108,7 +108,7 @@
 <meta property="og:image" content="http://m.qpic.cn/psb?/V11KiFfB3TEN6V/oZCdWZt4wKvkKchtzTmiBIoY6K5T25m7Ymm.P38fzZY!/b/dMUAAAAAAAAA&bo=IASwAAAAAAARF7Q!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V11KiFfB3TEN6V/pAYI3Nml.g43JolXFigOjcTN5RwdcFMp1jI8IzjXFQU!/b/dAgBAAAAAAAA&bo=bQOgAwAAAAARF.0!&rf=viewer_4">
 <meta property="og:image" content="http://m.qpic.cn/psb?/V11KiFfB3TEN6V/50OJRSg535ksfbXst8QX4pIkm6i7qkhZH9jS1AwEhBE!/b/dL8AAAAAAAAA&bo=OQVOAAAAAAARF1I!&rf=viewer_4">
-<meta property="og:updated_time" content="2019-09-19T09:21:44.551Z">
+<meta property="og:updated_time" content="2019-09-19T09:24:01.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何解决静态资源的缓存问题">
 <meta name="twitter:description" content="前言浏览器的缓存机制其实是一个很好的优化机制，可以避免重复请求相同的资源，减轻服务器的压力，也可以加快用户的二次读取。但凡事都有优缺点，缓存的存在会导致css，js或者其他静态资源不能及时更新。有时修改了html，html一般不会读取缓存，但css和js读取了缓存，就会出现一些莫名其妙的问题，而到了用户那边，则会一脸懵逼。 浏览器的缓存原理这个我也不太懂，就知道分为强制缓存和协商缓存。当二次打开网">
@@ -381,7 +381,7 @@
 <h2 id="浏览器的缓存原理"><a href="#浏览器的缓存原理" class="headerlink" title="浏览器的缓存原理"></a>浏览器的缓存原理</h2><p>这个我也不太懂，就知道分为强制缓存和协商缓存。当二次打开网页时，浏览器会先对缓存发起http请求，只要请求的资源存在缓存并且该资源的请求头<code>expires</code>和<code>cache-control</code>中存在缓存的标志，那就默认读取缓存，如果缓存失效但缓存依然存在，这时有会对服务器发出http请求，通过<code>last-modified</code>和<code>etag</code>两个请求头验证是否存在协商缓存，存在协商缓存就让浏览器照样读取缓存。</p>
 <p>当然，如果你资源已经不存在了或者明确禁止缓存，那浏览器也不可能使用缓存，这也是解决缓存问题的办法</p>
 <p><img src="http://m.qpic.cn/psb?/V11KiFfB3TEN6V/4D4BjI1cBe7t5F6oynhWI*du2W*mW9sGjHmTCViK5vc!/b/dLYAAAAAAAAA&amp;bo=.QI6AgAAAAARB*M!&amp;rf=viewer_4" alt="Mou icon"></p>
-<h3 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a>强制缓存</h3><p>强制缓存两个请求头，<code>expires</code>和<code>cache-control</code><br><code>expires</code>不怎么用，是http1.0提出的一个表示资源过期时间的header<br>而<code>cache-control</code>出现于 HTTP / 1.1，优先级高于<code>Expires</code>，同样也可以表示资源过期时间<br>当然<code>cache-control</code>并没有这么简单，有很多值，但常用的基本就是下面5个值</p>
+<h3 id="强制缓存"><a href="#强制缓存" class="headerlink" title="强制缓存"></a>强制缓存</h3><p>强制缓存两个请求头，<code>expires</code>和<code>cache-control</code><br><code>expires</code>不怎么用，是http1.0提出的一个表示资源过期时间的header<br>而<code>cache-control</code>出现于 HTTP / 1.1，优先级高于<code>Expires</code>，同样也可以表示资源过期时间，当然<code>cache-control</code>并没有这么简单，有很多值，但常用的基本就是下面5个值</p>
 <ul>
 <li>public：所有内容都将被缓存（客户端和代理服务器都可缓存）</li>
 <li>private：所有内容只有客户端可以缓存，Cache-Control的默认取值</li>
@@ -482,9 +482,9 @@
           
             <a href="/tags/HTTP/" rel="tag"># HTTP</a>
           
-            <a href="/tags/缓存机制/" rel="tag"># 缓存机制</a>
-          
             <a href="/tags/HTML/" rel="tag"># HTML</a>
+          
+            <a href="/tags/缓存机制/" rel="tag"># 缓存机制</a>
           
         </div>
       
